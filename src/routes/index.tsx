@@ -486,7 +486,7 @@ function Home() {
                     <button onClick={() => setOpenWhy(open ? null : i)}
                       className="w-full p-5 flex items-center gap-4 text-left">
                       <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-lg ${open ? "bg-brand text-white" : "bg-brand-soft text-brand"}`}>
-                        {/* @ts-expect-error icon component */}
+                        
                         <Icon className="h-5 w-5" />
                       </span>
                       <span className="flex-1 font-bold text-ink">{title as string}</span>
@@ -537,7 +537,7 @@ function Home() {
             <Reveal key={t as string} delay={i * 0.08}>
               <div className="rounded-xl border border-border bg-white p-7 hover:shadow-xl hover:-translate-y-1 transition">
                 <span className="grid h-12 w-12 place-items-center rounded-lg bg-brand text-white">
-                  {/* @ts-expect-error */}
+                  
                   <Icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-5 font-bold text-ink text-lg">{t as string}</h3>
