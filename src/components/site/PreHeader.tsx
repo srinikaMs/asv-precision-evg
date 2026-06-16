@@ -1,7 +1,7 @@
 import { Phone, Mail } from "lucide-react";
 
 export function PreHeader() {
-  const marquee = "Authorized Distributor: OSG Japan · Bilz Germany · Boehlerit Austria · Master Fluid USA · Hanboo Korea · Serving Tamil Nadu's precision manufacturing industry since 2015";
+  const marquee = "Authorized Distributor: OSG · Master Fluid · Boehlerit · KTA Spindle Tooling · ANEC · Wohlhaupter · Duracarb — Serving Tamil Nadu's precision manufacturing industry since 2015";
   return (
     <div className="bg-navy text-white/80 text-[11px]">
       <div className="container-x h-9 flex items-center justify-between gap-6 overflow-hidden">

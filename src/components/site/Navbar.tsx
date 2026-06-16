@@ -2,13 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import logo from "@/assets/asv-logo.jpeg.asset.json";
 
 const brands = [
-  { name: "OSG", desc: "Cutting Tools" },
-  { name: "Bilz", desc: "Tool Holding" },
-  { name: "Boehlerit", desc: "Carbide Inserts" },
-  { name: "Master Fluid", desc: "Metalworking Fluids" },
-  { name: "Hanboo", desc: "Special Tooling" },
+  { name: "OSG", desc: "Cutting Tools — Japan" },
+  { name: "Master Fluid", desc: "Metalworking Fluids — USA" },
+  { name: "Boehlerit", desc: "Carbide Inserts — Austria" },
+  { name: "KTA Spindle Tooling", desc: "Spindle & Holders" },
+  { name: "ANEC", desc: "Precision Measurement" },
+  { name: "Wohlhaupter", desc: "Boring Systems — Germany" },
+  { name: "Duracarb", desc: "Carbide Solutions" },
 ];
 
 export function Navbar() {
@@ -30,26 +33,26 @@ export function Navbar() {
     >
       <div className="container-x flex h-20 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3 min-w-0">
-          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-lg blue-grad text-white font-extrabold tracking-tight">
-            ASV
-          </div>
-          <div className="min-w-0 leading-tight">
+          <img src={logo.url} alt="ASV Engineering Solutions" className="h-11 w-auto shrink-0" />
+          <div className="min-w-0 leading-tight hidden sm:block">
             <div className="font-bold text-ink text-[15px]">Engineering Solutions</div>
             <div className="text-[11px] text-mute">Tiruvallur, Tamil Nadu</div>
           </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
+          <Link to="/" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">Home</Link>
           <div className="group relative">
-            <button className="px-4 py-2 text-sm font-medium text-ink hover:text-brand inline-flex items-center gap-1">
+            <Link to="/products" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand inline-flex items-center gap-1">
               Products <ChevronDown className="h-4 w-4" />
-            </button>
-            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition absolute top-full left-0 pt-3 w-72">
+            </Link>
+            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition absolute top-full left-0 pt-3 w-80">
               <div className="rounded-xl bg-white border border-border shadow-xl p-2">
                 {brands.map((b) => (
                   <Link
                     key={b.name}
                     to="/products"
+                    hash={b.name.toLowerCase().replace(/\s+/g, "-")}
                     className="flex items-center justify-between rounded-lg px-3 py-2.5 hover:bg-brand-soft"
                   >
                     <span className="font-semibold text-ink">{b.name}</span>
@@ -91,7 +94,7 @@ export function Navbar() {
             className="fixed inset-0 z-50 bg-navy text-white"
           >
             <div className="container-x flex h-20 items-center justify-between">
-              <div className="font-extrabold text-xl">ASV</div>
+              <img src={logo.url} alt="ASV" className="h-10 w-auto" />
               <button onClick={() => setOpen(false)} aria-label="Close"><X className="h-7 w-7" /></button>
             </div>
             <nav className="container-x mt-6 flex flex-col gap-1">

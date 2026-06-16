@@ -13,7 +13,7 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const brands = ["OSG (Cutting Tools)", "Bilz (Tool Holding)", "Boehlerit (Carbide Inserts)", "Master Fluid (Coolants)", "Hanboo (Special Tooling)", "Not sure — recommend"];
+const brands = ["OSG (Cutting Tools)", "Master Fluid (Coolants)", "Boehlerit (Carbide Inserts)", "KTA Spindle Tooling", "ANEC (Measurement)", "Wohlhaupter (Boring)", "Duracarb (Carbide)", "Not sure — recommend"];
 
 function Contact() {
   const [sent, setSent] = useState(false);
@@ -77,7 +77,7 @@ function Contact() {
           <Reveal delay={0.1}>
             <div className="space-y-4">
               {[
-                [MapPin, "Visit", "Tiruvallur, Tamil Nadu, India"],
+                [MapPin, "Visit", "ASV Engineering Solutions\nNo. 3, 60 Feet Road, V.M Nagar Extn\nJJ Salai, Tiruvallur, TN 602001"],
                 [Phone, "Call", "+91 97871 18179\n+91 73389 36926"],
                 [Mail, "Email", "sales.asvengg@gmail.com"],
               ].map(([Icon, t, d]) => (
@@ -103,7 +103,7 @@ function Contact() {
         <div className="container-x mt-12">
           <div className="rounded-2xl overflow-hidden border border-border shadow-md">
             <iframe title="ASV Location"
-              src="https://www.google.com/maps?q=Tiruvallur+Tamil+Nadu&output=embed"
+              src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed"
               className="w-full h-[400px]" loading="lazy" />
           </div>
         </div>
