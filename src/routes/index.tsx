@@ -240,25 +240,26 @@ function Home() {
   return (
     <>
       {/* HERO with image carousel */}
-      <section className="relative overflow-hidden bg-navy text-white">
-        <Swiper
-          modules={[Autoplay, Pagination, EffectFade]}
-          effect="fade"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          loop
-          pagination={{ clickable: true }}
-          className="absolute inset-0 !h-full hero-swiper"
-        >
-          {heroSlides.map((s, i) => (
-            <SwiperSlide key={i}>
-              <div className="absolute inset-0">
+      <section className="relative overflow-hidden bg-navy text-white min-h-[92vh]">
+        <div className="absolute inset-0">
+          <Swiper
+            modules={[Autoplay, Pagination, EffectFade]}
+            effect="fade"
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            loop
+            pagination={{ clickable: true }}
+            className="hero-swiper w-full h-full"
+            style={{ width: "100%", height: "100%" }}
+          >
+            {heroSlides.map((s, i) => (
+              <SwiperSlide key={i}>
                 <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40" />
                 <div className="absolute inset-0 hero-grad opacity-60" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         <div className="relative container-x min-h-[92vh] flex items-center py-24">
           <div className="max-w-3xl">
