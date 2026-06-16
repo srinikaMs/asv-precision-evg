@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About ASV Engineering Solutions — Tamil Nadu's Tooling Partner" },
-      { name: "description", content: "Established 2015 in Tiruvallur. Authorized distributor for OSG, Bilz, Boehlerit, Master Fluid and Hanboo. Led by Mr. A. Suresh." },
+      { name: "description", content: "Established 2015 in Tiruvallur. Authorized distributor for OSG, Master Fluid, Boehlerit, KTA Spindle Tooling, ANEC, Wohlhaupter and Duracarb. Led by Mr. A. Suresh." },
     ],
   }),
   component: About,
@@ -15,10 +15,10 @@ export const Route = createFileRoute("/about")({
 const timeline = [
   ["2015", "ASV Engineering Solutions founded in Tiruvallur. Authorized distributor for Master Fluid Solutions."],
   ["2017", "Added OSG cutting tools to the portfolio. Expanded reach across Chennai industrial belt."],
-  ["2019", "Bilz Germany tool-holding systems added. Began application engineering support service."],
+  ["2019", "KTA Spindle Tooling added — BT/HSK tool holders and shrink-fit systems for CNC machining centers."],
   ["2021", "Boehlerit Austria carbide inserts onboarded. Customer base crossed major TVS Group companies."],
-  ["2023", "Hanboo Korea special tooling added — five global brand portfolio complete."],
-  ["2024", "Reinforced ready-stock model. 11+ major clients with 21+ years of supply relationships."],
+  ["2023", "Wohlhaupter Germany boring systems and ANEC metrology added — complete machining solution."],
+  ["2024", "Duracarb carbide tooling added — seven-brand portfolio complete. 11+ major clients, 21+ years."],
 ];
 
 const values = [
@@ -45,7 +45,7 @@ function About() {
             <div className="eyebrow text-brand">Our Story</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">A journey of precision and partnerships</h2>
             <p className="mt-5 text-mute leading-relaxed">
-              ASV Engineering Solutions began in 2015 with a simple mission — bring world-class precision tooling to Tamil Nadu's manufacturers with genuine product, expert support and reliable supply. A decade later, we are the authorized distributor for five global brands and the trusted partner of India's leading engineering companies.
+              ASV Engineering Solutions began in 2015 with a simple mission — bring world-class precision tooling to Tamil Nadu's manufacturers with genuine product, expert support and reliable supply. A decade later, we are the authorized distributor for seven global brands and the trusted partner of India's leading engineering companies.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -126,11 +126,12 @@ function About() {
       <section className="bg-white py-20">
         <div className="container-x">
           <Reveal><h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center">Find us in Tiruvallur</h2></Reveal>
+          <Reveal delay={0.05}><p className="mt-3 text-center text-mute">No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001</p></Reveal>
           <Reveal delay={0.1}>
             <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-md">
               <iframe
                 title="ASV Location"
-                src="https://www.google.com/maps?q=Tiruvallur+Tamil+Nadu&output=embed"
+                src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed"
                 className="w-full h-[420px]" loading="lazy"
               />
             </div>
