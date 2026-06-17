@@ -249,63 +249,91 @@ function Home() {
 
   return (
     <>
-      {/* HERO with image carousel */}
-      <section className="relative overflow-hidden bg-navy text-white min-h-[92vh]">
-        <div className="absolute inset-0">
-          <Swiper
-            modules={[Autoplay, Pagination, EffectFade]}
-            effect="fade"
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            loop
-            pagination={{ clickable: true }}
-            className="hero-swiper w-full h-full"
-            style={{ width: "100%", height: "100%" }}
-          >
-            {heroSlides.map((s, i) => (
-              <SwiperSlide key={i}>
-                <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40" />
-                <div className="absolute inset-0 hero-grad opacity-60" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+      {/* HERO — 7-brand carousel */}
+      <section className="relative overflow-hidden bg-navy text-white">
+        <Swiper
+          modules={[Autoplay, Pagination, Navigation, EffectFade]}
+          effect="fade"
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          loop
+          pagination={{ clickable: true }}
+          navigation={{ prevEl: ".hero-prev", nextEl: ".hero-next" }}
+          className="hero-swiper w-full"
+          style={{ height: "92vh", minHeight: "640px" }}
+        >
+          {heroSlides.map((s, i) => (
+            <SwiperSlide key={s.brand}>
+              <div className="relative w-full h-full">
+                <img src={s.img} alt={`${s.brand} — ${s.tagline}`} className="absolute inset-0 w-full h-full object-cover" loading={i === 0 ? "eager" : "lazy"} />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/30" />
+                <div className="absolute inset-0 hero-grad opacity-50" />
 
-        <div className="relative z-10 container-x min-h-[92vh] flex items-center py-24">
-          <div className="max-w-3xl">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 eyebrow text-gold">
-              ✦ Authorized Distributor · Tiruvallur, Tamil Nadu
-            </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="mt-6 text-4xl md:text-5xl lg:text-[58px] font-extrabold leading-[1.05]">
-              Precision Cutting Tools &amp; CNC Tooling for <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-300">Tamil Nadu's Manufacturers</span>
-            </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-6 text-lg text-white/80 max-w-2xl leading-relaxed">
-              Authorized distributor of <strong className="text-white">OSG, Master Fluid, Boehlerit, KTA Spindle Tooling, ANEC, Wohlhaupter and Duracarb</strong> — taps, drills, carbide inserts, tool holders, boring systems, coolants and metrology delivered from ready stock.
-            </motion.p>
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }}
-              className="mt-8 flex flex-wrap gap-3">
-              <Link to="/products" className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 font-semibold text-navy hover:bg-blue-50 transition shadow-xl">
-                Explore Products <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition">
-                Talk to Our Expert
-              </Link>
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7, duration: 0.8 }}
-              className="mt-12 grid grid-cols-3 sm:grid-cols-7 gap-2 max-w-3xl">
-              {brands.map((b) => (
-                <Link key={b.name} to="/products" hash={b.name.toLowerCase().replace(/\s+/g, "-")} className="glass rounded-lg px-2 py-3 text-center hover:bg-white/15 transition">
-                  <div className="text-lg">{b.flag}</div>
-                  <div className="text-[10px] font-bold mt-1 truncate">{b.name}</div>
-                </Link>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce-down text-white/60 z-10">
+                <div className="relative z-10 container-x h-full flex items-center py-24">
+                  <div className="max-w-3xl">
+                    <motion.div
+                      key={`kicker-${i}`}
+                      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+                      className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 eyebrow text-gold"
+                    >
+                      {s.flag} {s.country} · Authorized Distributor
+                    </motion.div>
+
+                    <motion.h1
+                      key={`title-${i}`}
+                      initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
+                      className="mt-6 text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.02]"
+                    >
+                      {s.brand}
+                    </motion.h1>
+
+                    <motion.p
+                      key={`tag-${i}`}
+                      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
+                      className="mt-5 text-xl md:text-2xl text-white/85 max-w-2xl leading-snug font-medium"
+                    >
+                      {s.tagline}
+                    </motion.p>
+
+                    <motion.div
+                      key={`prods-${i}`}
+                      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}
+                      className="mt-6 flex flex-wrap gap-2"
+                    >
+                      {s.products.map((p) => (
+                        <span key={p} className="glass rounded-full px-4 py-1.5 text-sm font-semibold text-white">
+                          {p}
+                        </span>
+                      ))}
+                    </motion.div>
+
+                    <motion.div
+                      key={`cta-${i}`}
+                      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}
+                      className="mt-9 flex flex-wrap gap-3"
+                    >
+                      <Link to="/products" hash={s.hash} className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-3.5 font-semibold text-navy hover:bg-blue-50 transition shadow-xl">
+                        View Products <ArrowRight className="h-4 w-4" />
+                      </Link>
+                      <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/5 px-7 py-3.5 font-semibold text-white hover:bg-white/15 transition">
+                        Get a Quote
+                      </Link>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* nav arrows */}
+        <button className="hero-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full glass flex items-center justify-center hover:bg-white/20 transition" aria-label="Previous slide">
+          <ChevronLeft className="h-6 w-6 text-white" />
+        </button>
+        <button className="hero-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full glass flex items-center justify-center hover:bg-white/20 transition" aria-label="Next slide">
+          <ChevronRight className="h-6 w-6 text-white" />
+        </button>
+
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce-down text-white/60 z-10 pointer-events-none">
           <ChevronDown className="h-7 w-7" />
         </div>
       </section>
