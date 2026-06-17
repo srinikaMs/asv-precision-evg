@@ -93,8 +93,8 @@ export function Navbar() {
             transition={{ type: "tween", duration: 0.3 }}
             className="fixed inset-0 z-50 bg-navy text-white"
           >
-            <div className="container-x flex h-20 items-center justify-between">
-              <img src={logo.url} alt="ASV" className="h-10 w-auto" />
+            <div className="container-x flex h-24 items-center justify-between">
+              <img src={logo.url} alt="ASV" className="h-16 w-auto" />
               <button onClick={() => setOpen(false)} aria-label="Close"><X className="h-7 w-7" /></button>
             </div>
             <nav className="container-x mt-6 flex flex-col gap-1">
