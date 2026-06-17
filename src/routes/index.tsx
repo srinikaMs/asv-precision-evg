@@ -7,19 +7,26 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import {
-  ArrowRight, Check, ChevronDown, MapPin, Phone, Mail,
+  ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight, MapPin, Phone, Mail,
   Cog, Wrench, Beaker, Layers, Settings, Ruler, Zap, Truck, ShieldCheck, Headphones, Award, Clock,
 } from "lucide-react";
 import { useState } from "react";
 import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
 import { Counter } from "../components/site/Counter";
+import heroTaps from "@/assets/prod-taps.jpg";
+import heroCoolant from "@/assets/prod-coolant.jpg";
+import heroTurning from "@/assets/prod-turninginserts.jpg";
+import heroHolders from "@/assets/prod-toolholders.jpg";
+import heroIndexable from "@/assets/prod-indexabledrilling.jpg";
+import heroBoring from "@/assets/prod-boringhead.jpg";
+import heroCarbide from "@/assets/prod-solidcarbide.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ASV Engineering Solutions — Precision Cutting Tools & CNC Tooling Distributor Tiruvallur Tamil Nadu" },
-      { name: "description", content: "Authorized distributor of OSG, Master Fluid, Boehlerit, KTA Spindle Tooling, ANEC, Wohlhaupter and Duracarb. Premium CNC cutting tools, carbide inserts, tool holders, coolants and precision measurement instruments for Tamil Nadu's manufacturers." },
-      { name: "keywords", content: "ASV Engineering Solutions, cutting tools distributor Tamil Nadu, OSG India dealer, Master Fluid coolant supplier, Boehlerit carbide inserts, KTA spindle tooling, ANEC precision instruments, Wohlhaupter boring tools, Duracarb carbide, CNC tooling Tiruvallur, taps drills reamers Chennai, metalworking fluids India, precision tool supplier Sriperumbudur, industrial tooling Tamil Nadu" },
+      { name: "description", content: "Authorized distributor of OSG, Master Fluid, Boehlerit, KTA Spindle Tooling, AMEC / ANEC, Wohlhaupter and Duracarb. Premium CNC cutting tools, carbide inserts, tool holders, coolants and precision measurement instruments for Tamil Nadu's manufacturers." },
+      { name: "keywords", content: "ASV Engineering Solutions, cutting tools distributor Tamil Nadu, OSG India dealer, Master Fluid coolant supplier, Boehlerit carbide inserts, KTA spindle tooling, AMEC drilling, ANEC precision instruments, Wohlhaupter boring tools, Duracarb carbide, CNC tooling Tiruvallur, taps drills reamers Chennai, metalworking fluids India, precision tool supplier Sriperumbudur, industrial tooling Tamil Nadu" },
       { property: "og:title", content: "ASV Engineering Solutions — Precision Tooling" },
       { property: "og:description", content: "Genuine cutting tools, holders, inserts, coolants and metrology — ready stock, fast delivery across Tamil Nadu." },
     ],
@@ -27,12 +34,15 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-// Hero carousel — industrial imagery
+// 7-brand hero carousel — each slide highlights a principal brand
 const heroSlides = [
-  { img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=80", kicker: "Precision CNC Machining", title: "Cutting Tools That Run Your Production Line" },
-  { img: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1800&q=80", kicker: "OSG · Master Fluid · Boehlerit", title: "Genuine Brand-Direct Tools, Ready Stock in Tiruvallur" },
-  { img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1800&q=80", kicker: "KTA · Wohlhaupter · Duracarb", title: "Tool Holding, Boring & Carbide Excellence" },
-  { img: "https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1800&q=80", kicker: "ANEC Metrology", title: "Precision Measurement You Can Trust" },
+  { brand: "OSG", flag: "🇯🇵", country: "JAPAN", tagline: "Precision Cutting Tools Manufacturer — Since 1938", products: ["Taps", "Drills", "End Mills", "Indexable Tools", "Thread Mills"], img: heroTaps, hash: "osg" },
+  { brand: "Master Fluid Solutions", flag: "🇺🇸", country: "USA", tagline: "TRIM® Industrial Metalworking Fluids & Coolants", products: ["Cutting Fluids", "Coolants", "Cleaners"], img: heroCoolant, hash: "master-fluid" },
+  { brand: "Boehlerit", flag: "🇦🇹", country: "AUSTRIA", tagline: "Carbide Cutting Tools & Inserts Specialist", products: ["Turning Inserts", "Milling Tools", "Carbide Rods"], img: heroTurning, hash: "boehlerit" },
+  { brand: "KTA Spindle Tooling", flag: "⚙️", country: "PREMIUM", tagline: "Spindle Tooling & Toolholding Solutions", products: ["Tool Holders", "Spindle Accessories"], img: heroHolders, hash: "kta-spindle-tooling" },
+  { brand: "Allied Machine (AMEC)", flag: "🇺🇸", country: "USA", tagline: "Drilling & Hole-Making Solutions", products: ["Drilling Systems", "Boring Tools", "Threading"], img: heroIndexable, hash: "anec" },
+  { brand: "Wohlhaupter", flag: "🇩🇪", country: "GERMANY", tagline: "World Leader in Precision Boring Systems", products: ["Boring Heads", "Fine Boring Tools", "Back Spotfacing"], img: heroBoring, hash: "wohlhaupter" },
+  { brand: "Duracarb", flag: "🛠️", country: "CARBIDE", tagline: "Tungsten Carbide Tools & Rods Manufacturer", products: ["Carbide Rods", "Wear Parts", "Custom Carbide Tooling"], img: heroCarbide, hash: "duracarb" },
 ];
 
 const brands = [
