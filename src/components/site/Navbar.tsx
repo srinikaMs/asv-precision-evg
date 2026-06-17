@@ -31,12 +31,12 @@ export function Navbar() {
         scrolled ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]" : "bg-white/95 backdrop-blur"
       }`}
     >
-      <div className="container-x flex h-20 items-center justify-between gap-6">
-        <Link to="/" className="flex items-center gap-3 min-w-0">
-          <img src={logo.url} alt="ASV Engineering Solutions" className="h-11 w-auto shrink-0" />
-          <div className="min-w-0 leading-tight hidden sm:block">
-            <div className="font-bold text-ink text-[15px]">Engineering Solutions</div>
-            <div className="text-[11px] text-mute">Tiruvallur, Tamil Nadu</div>
+      <div className="container-x flex h-24 items-center justify-between gap-6">
+        <Link to="/" className="flex items-center gap-4 min-w-0">
+          <img src={logo.url} alt="ASV Engineering Solutions" className="h-16 md:h-20 w-auto shrink-0" />
+          <div className="min-w-0 leading-tight hidden md:block">
+            <div className="font-extrabold text-ink text-[17px] tracking-tight">ASV Engineering Solutions</div>
+            <div className="text-[12px] text-mute">Tiruvallur, Tamil Nadu</div>
           </div>
         </Link>
 
