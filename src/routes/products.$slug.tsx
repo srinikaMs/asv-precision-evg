@@ -63,7 +63,7 @@ function ProductDetail() {
   const data = Route.useLoaderData();
   const { product, category } = data;
   const gallery = [product.image, category.banner, product.image];
-  const related = category.products.filter((item) => item.slug !== product.slug).slice(0, 3);
+  const related = category.products.filter((item: (typeof category.products)[number]) => item.slug !== product.slug).slice(0, 3);
 
   return (
     <>
@@ -193,7 +193,7 @@ function ProductDetail() {
             <h2 className="text-3xl font-extrabold text-navy">Related Products</h2>
           </Reveal>
           <Stagger className="mt-8 grid md:grid-cols-3 gap-5">
-            {related.map((item) => (
+            {related.map((item: (typeof related)[number]) => (
               <Item key={item.slug} variants={itemVariants} className="rounded-xl border border-border bg-white overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
                 <img src={item.image} alt={item.name} className="h-48 w-full object-cover" loading="lazy" width={1024} height={1024} />
                 <div className="p-5">
