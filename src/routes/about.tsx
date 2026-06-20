@@ -1,31 +1,32 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, Zap, Award, Handshake } from "lucide-react";
+import { ShieldCheck, Zap, Award, Handshake, Wrench, Cog } from "lucide-react";
 import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ASV Engineering Solutions — Tamil Nadu's Tooling Partner" },
-      { name: "description", content: "Established 2015 in Tiruvallur. Authorized distributor for OSG, Master Fluid, Boehlerit, KTA Spindle Tooling, ANEC, Wohlhaupter and Duracarb. Led by Mr. A. Suresh." },
+      { title: "About ASV Precision | Precision Engineering Solutions Tamil Nadu" },
+      { name: "description", content: "Learn about ASV Precision, a premium industrial tooling supplier focused on engineering excellence, manufacturing support and technical assistance." },
+      { property: "og:title", content: "About ASV Precision" },
+      { property: "og:description", content: "Industrial expertise, manufacturing support solutions and technical assistance for modern manufacturers." },
+      { property: "og:url", content: "https://asv-precision-evg.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://asv-precision-evg.lovable.app/about" }],
   }),
   component: About,
 });
 
-const timeline = [
-  ["2015", "ASV Engineering Solutions founded in Tiruvallur. Authorized distributor for Master Fluid Solutions."],
-  ["2017", "Added OSG cutting tools to the portfolio. Expanded reach across Chennai industrial belt."],
-  ["2019", "KTA Spindle Tooling added — BT/HSK tool holders and shrink-fit systems for CNC machining centers."],
-  ["2021", "Boehlerit Austria carbide inserts onboarded. Customer base crossed major TVS Group companies."],
-  ["2023", "Wohlhaupter Germany boring systems and ANEC metrology added — complete machining solution."],
-  ["2024", "Duracarb carbide tooling added — seven-brand portfolio complete. 11+ major clients, 21+ years."],
+const values = [
+  [ShieldCheck, "Authorized Distributor Network", "Official supply network for global industrial tooling and engineering brands."],
+  [Award, "Engineering Excellence", "Application-led product recommendations for production, quality and tool life improvements."],
+  [Zap, "Fast Delivery", "Ready stock and responsive commercial support for urgent machining requirements."],
+  [Handshake, "Reliable Service", "Long-term support built around performance, credibility and repeat manufacturing supply."],
 ];
 
-const values = [
-  [ShieldCheck, "Genuineness", "Every product brand-direct. Zero counterfeits, full warranty."],
-  [Award, "Expertise", "Trained application engineers. Speed, feed and grade selection guidance."],
-  [Zap, "Speed", "Ready stock. Same-day or next-day dispatch across Tamil Nadu."],
-  [Handshake, "Partnership", "21+ year customer relationships. We win when you win."],
+const strengths = [
+  [Cog, "Industrial Expertise", "Solutions aligned to CNC machining, holemaking, tool holding, carbide applications and process improvement."],
+  [Wrench, "Manufacturing Support Solutions", "From product selection to process support, ASV Precision helps reduce downtime and improve output."],
+  [ShieldCheck, "Technical Assistance", "Support for cutting parameters, coolant choices, toolholding and machining performance optimization."],
 ];
 
 function About() {
@@ -34,25 +35,30 @@ function About() {
       <section className="hero-grad text-white py-24">
         <div className="container-x">
           <div className="text-xs text-white/60"><Link to="/" className="hover:text-white">Home</Link> / About</div>
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold max-w-3xl">Building Precision Manufacturing in Tamil Nadu Since 2015</h1>
-          <p className="mt-5 max-w-2xl text-white/70">A decade of trusted distribution, two decades of customer relationships, and five of the world's most respected tooling brands.</p>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold max-w-3xl">About ASV Precision</h1>
+          <p className="mt-5 max-w-2xl text-white/70">A premium B2B industrial company built around genuine supply, manufacturing support solutions, engineering excellence and technical assistance.</p>
         </div>
       </section>
 
       <section className="bg-white py-20">
-        <div className="container-x grid lg:grid-cols-2 gap-14">
+        <div className="container-x grid lg:grid-cols-2 gap-14 items-center">
           <Reveal>
-            <div className="eyebrow text-brand">Our Story</div>
-            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">A journey of precision and partnerships</h2>
-            <p className="mt-5 text-mute leading-relaxed">
-              ASV Engineering Solutions began in 2015 with a simple mission — bring world-class precision tooling to Tamil Nadu's manufacturers with genuine product, expert support and reliable supply. A decade later, we are the authorized distributor for seven global brands and the trusted partner of India's leading engineering companies.
-            </p>
+            <div>
+              <div className="eyebrow text-brand">Company Overview</div>
+              <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">Built to support modern manufacturing</h2>
+              <p className="mt-5 text-mute leading-relaxed">
+                ASV Precision serves manufacturers with a focused portfolio of industrial tooling, metalworking support products and application-driven engineering service. The business is built around performance, responsiveness and premium industrial standards.
+              </p>
+              <p className="mt-4 text-mute leading-relaxed">
+                From CNC cutting tools and tool holding systems to carbide components and fluids, ASV Precision supports production teams that need reliable recommendations, genuine products and strong commercial follow-through.
+              </p>
+            </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="rounded-2xl p-8" style={{ background: "var(--surface)" }}>
-              <div className="eyebrow text-brand">Our Mission</div>
+            <div className="rounded-2xl p-8 border border-border" style={{ background: "var(--surface)" }}>
+              <div className="eyebrow text-brand">Engineering Focus</div>
               <p className="mt-3 text-xl font-bold text-navy leading-snug">
-                "To deliver precision tooling solutions that enhance productivity and reduce cost-per-part for Tamil Nadu's manufacturers."
+                "Deliver premium precision engineering solutions that improve machining performance, productivity and trust across every enquiry."
               </p>
             </div>
           </Reveal>
@@ -61,33 +67,29 @@ function About() {
 
       <section className="py-20" style={{ background: "var(--surface)" }}>
         <div className="container-x">
-          <Reveal><div className="eyebrow text-brand">Timeline</div></Reveal>
-          <Reveal delay={0.05}><h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">From founding to five-brand authorization</h2></Reveal>
-          <div className="mt-12 relative">
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-border md:left-1/2" />
-            <Stagger className="space-y-8" gap={0.12}>
-              {timeline.map(([y, t], i) => (
-                <Item key={y} variants={itemVariants} className={`relative grid md:grid-cols-2 md:gap-12 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-                  <div className={`pl-12 md:pl-0 ${i % 2 ? "md:text-left" : "md:text-right"}`}>
-                    <div className="text-3xl font-extrabold text-brand">{y}</div>
-                    <p className="mt-2 text-sm text-mute leading-relaxed max-w-md md:ml-auto">{t}</p>
-                  </div>
-                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 grid h-4 w-4 place-items-center rounded-full bg-brand ring-4 ring-white" />
-                  <div />
-                </Item>
-              ))}
-            </Stagger>
-          </div>
+          <Reveal><div className="eyebrow text-brand text-center">What We Bring</div></Reveal>
+          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Industrial capability beyond product supply</h2></Reveal>
+          <Stagger className="mt-12 grid md:grid-cols-3 gap-6">
+            {strengths.map(([Icon, title, desc]) => (
+              <Item key={title as string} variants={itemVariants} className="rounded-xl border border-border p-7 bg-white shadow-sm">
+                <span className="grid h-12 w-12 place-items-center rounded-lg bg-brand-soft text-brand">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <h3 className="mt-4 font-bold text-ink text-lg">{title as string}</h3>
+                <p className="mt-3 text-sm text-mute leading-relaxed">{desc as string}</p>
+              </Item>
+            ))}
+          </Stagger>
         </div>
       </section>
 
       <section className="bg-white py-20">
         <div className="container-x">
-          <Reveal><div className="eyebrow text-brand text-center">Our Values</div></Reveal>
-          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">What guides us every day</h2></Reveal>
+          <Reveal><div className="eyebrow text-brand text-center">Why Choose ASV Precision</div></Reveal>
+          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Reliable industrial support at every stage</h2></Reveal>
           <Stagger className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map(([Icon, t, d]) => (
-              <Item key={t as string} variants={itemVariants} className="rounded-xl border border-border p-7 text-center hover:-translate-y-1 hover:shadow-xl transition">
+              <Item key={t as string} variants={itemVariants} className="rounded-xl border border-border p-7 text-center hover:-translate-y-1 hover:shadow-xl transition bg-white">
                 <span className="grid h-12 w-12 mx-auto place-items-center rounded-lg bg-brand-soft text-brand">
                   <Icon className="h-5 w-5" />
                 </span>
@@ -101,39 +103,11 @@ function About() {
 
       <section className="py-20" style={{ background: "var(--surface)" }}>
         <div className="container-x">
-          <Reveal><div className="eyebrow text-brand text-center">Our Team</div></Reveal>
-          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Led by experienced industry hands</h2></Reveal>
-          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {[
-              ["Mr. A. Suresh", "Proprietor", "Over two decades of experience in precision tooling distribution and customer relationship building across Tamil Nadu's manufacturing community."],
-              ["Nandhan D", "Sales & Application Manager", "Hands-on application engineering support — tool selection, parameter optimization and on-site troubleshooting for customers."],
-            ].map(([n, r, b]) => (
-              <Reveal key={n}>
-                <div className="bg-white rounded-2xl p-8 border border-border shadow-sm">
-                  <div className="grid h-16 w-16 place-items-center rounded-full blue-grad text-white text-2xl font-extrabold">
-                    {n.split(" ").map((w) => w[0]).slice(0, 2).join("")}
-                  </div>
-                  <h3 className="mt-5 font-bold text-ink text-lg">{n}</h3>
-                  <div className="text-sm font-semibold text-brand">{r}</div>
-                  <p className="mt-3 text-sm text-mute leading-relaxed">{b}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-20">
-        <div className="container-x">
           <Reveal><h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center">Find us in Tiruvallur</h2></Reveal>
           <Reveal delay={0.05}><p className="mt-3 text-center text-mute">No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001</p></Reveal>
           <Reveal delay={0.1}>
             <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-md">
-              <iframe
-                title="ASV Location"
-                src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed"
-                className="w-full h-[420px]" loading="lazy"
-              />
+              <iframe title="ASV Precision Location" src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed" className="w-full h-[420px]" loading="lazy" />
             </div>
           </Reveal>
         </div>

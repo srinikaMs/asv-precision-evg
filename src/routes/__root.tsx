@@ -54,17 +54,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ASV Engineering Solutions — Precision Tooling Distributor, Tamil Nadu" },
-      { name: "description", content: "Authorized distributor for OSG, Bilz, Boehlerit, Master Fluid and Hanboo. Precision cutting tools, tool holders, carbide inserts and metalworking fluids for Tamil Nadu's manufacturers." },
-      { name: "author", content: "ASV Engineering Solutions" },
-      { property: "og:title", content: "ASV Engineering Solutions — Precision Tooling Distributor, Tamil Nadu" },
-      { property: "og:description", content: "Authorized distributor for OSG, Bilz, Boehlerit, Master Fluid and Hanboo. Precision cutting tools, tool holders, carbide inserts and metalworking fluids for Tamil Nadu's manufacturers." },
+      { title: "ASV Precision | Industrial Tooling Supplier Tamil Nadu" },
+      { name: "description", content: "ASV Precision is a premium industrial tooling supplier for CNC cutting tools, tool holding systems, carbide inserts, metalworking fluids and precision engineering solutions in Tamil Nadu." },
+      { name: "author", content: "ASV Precision" },
+      { property: "og:title", content: "ASV Precision | Industrial Tooling Supplier Tamil Nadu" },
+      { property: "og:description", content: "Premium B2B industrial website for CNC tooling, carbide inserts, tool holding systems, metalworking fluids and manufacturing solutions." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "ASV Precision" },
+      { property: "og:url", content: "https://asv-precision-evg.lovable.app" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ASV Engineering Solutions — Precision Tooling Distributor, Tamil Nadu" },
-      { name: "twitter:description", content: "Authorized distributor for OSG, Bilz, Boehlerit, Master Fluid and Hanboo. Precision cutting tools, tool holders, carbide inserts and metalworking fluids for Tamil Nadu's manufacturers." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0dfdd479-4257-4e6c-9e82-52b543ea5aa5/id-preview-e0125469--4ca3ef1e-f087-4845-a8cf-67fce84c84f5.lovable.app-1781497770004.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0dfdd479-4257-4e6c-9e82-52b543ea5aa5/id-preview-e0125469--4ca3ef1e-f087-4845-a8cf-67fce84c84f5.lovable.app-1781497770004.png" },
+      { name: "twitter:title", content: "ASV Precision | Industrial Tooling Supplier Tamil Nadu" },
+      { name: "twitter:description", content: "Industrial tooling supplier, CNC tool distributor and precision engineering solutions partner." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -72,6 +72,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" },
       { rel: "stylesheet", href: appCss },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "ASV Precision",
+        url: "https://asv-precision-evg.lovable.app",
+        telephone: "+91 97871 18179",
+        email: "sales.asvengg@gmail.com",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai",
+          addressLocality: "Tiruvallur",
+          addressRegion: "Tamil Nadu",
+          postalCode: "602001",
+          addressCountry: "IN"
+        }
+      })
+    }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
