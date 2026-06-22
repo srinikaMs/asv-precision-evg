@@ -22,7 +22,7 @@ export const Route = createFileRoute("/products/$slug")({
     if (!result) {
       return {
         meta: [
-          { title: "Product Not Found | ASV Precision" },
+          { title: "Product Not Found | ASV Engineering Solutions" },
           { property: "og:url", content: `https://asv-precision-evg.lovable.app/products/${params.slug}` },
         ],
         links: [{ rel: "canonical", href: `https://asv-precision-evg.lovable.app/products/${params.slug}` }],
@@ -31,9 +31,9 @@ export const Route = createFileRoute("/products/$slug")({
 
     return {
       meta: [
-        { title: `${result.product.name} | ${result.category.name} | ASV Precision` },
+        { title: `${result.product.name} | ${result.category.name} | ASV Engineering Solutions` },
         { name: "description", content: result.product.description },
-        { property: "og:title", content: `${result.product.name} | ASV Precision` },
+        { property: "og:title", content: `${result.product.name} | ASV Engineering Solutions` },
         { property: "og:description", content: result.product.description },
         { property: "og:url", content: `https://asv-precision-evg.lovable.app/products/${params.slug}` },
         { property: "og:image", content: result.product.image },
@@ -127,7 +127,7 @@ function ProductDetail() {
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-4 text-mute leading-relaxed">
-                {product.name} is suited for demanding machining environments where stability, repeatability and productivity matter. ASV Precision supports application matching based on component material, machine capability and production goals.
+                {product.name} is suited for demanding machining environments where stability, repeatability and productivity matter. ASV Engineering Solutions supports application matching based on component material, machine capability and production goals.
               </p>
             </Reveal>
 

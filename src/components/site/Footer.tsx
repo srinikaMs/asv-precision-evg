@@ -9,10 +9,10 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <div className="rounded-lg bg-white p-2">
-              <img src={logo.url} alt="ASV Precision" className="h-10 w-auto" />
+              <img src={logo.url} alt="ASV Engineering Solutions" className="h-10 w-auto" />
             </div>
             <div className="leading-tight">
-              <div className="font-bold text-white">ASV Precision</div>
+              <div className="font-bold text-white">ASV Engineering Solutions</div>
               <div className="text-[11px] text-white/60">Tiruvallur, Tamil Nadu</div>
             </div>
           </div>
@@ -54,7 +54,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-x py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
-          <div>© {new Date().getFullYear()} ASV Precision. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} ASV Engineering Solutions. All rights reserved.</div>
           <div>Industrial tooling. Engineering support. Genuine supply.</div>
         </div>
       </div>

@@ -5,9 +5,9 @@ import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
 export const Route = createFileRoute("/customers")({
   head: () => ({
     meta: [
-      { title: "Manufacturers We Serve | ASV Precision" },
+      { title: "Manufacturers We Serve | ASV Engineering Solutions" },
       { name: "description", content: "Trusted industrial tooling supplier for Brakes India, Turbo Energy, ABI-Showatech, Wheels India, Sundram Fasteners, Hyundai WIA and other manufacturers." },
-      { property: "og:title", content: "Manufacturers We Serve | ASV Precision" },
+      { property: "og:title", content: "Manufacturers We Serve | ASV Engineering Solutions" },
       { property: "og:description", content: "Premium industrial tooling support for leading manufacturers across Tamil Nadu." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app/customers" },
     ],
@@ -82,7 +82,7 @@ function Customers() {
       <section className="blue-grad text-white">
         <div className="container-x py-20 text-center">
           <Reveal><h2 className="text-3xl md:text-5xl font-extrabold max-w-3xl mx-auto">Need tooling support for your production line?</h2></Reveal>
-          <Reveal delay={0.1}><p className="mt-4 text-white/80 max-w-xl mx-auto">Talk to ASV Precision for cutting tools, tool holding, carbide inserts, coolants and application engineering support.</p></Reveal>
+          <Reveal delay={0.1}><p className="mt-4 text-white/80 max-w-xl mx-auto">Talk to ASV Engineering Solutions for cutting tools, tool holding, carbide inserts, coolants and application engineering support.</p></Reveal>
           <Reveal delay={0.2}>
             <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 font-semibold text-navy hover:bg-blue-50 transition">
               Contact Sales <ArrowRight className="h-4 w-4" />

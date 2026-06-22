@@ -47,10 +47,10 @@ import imgSpecialCarbideComponents from "@/assets/prod-specialcarbidecomponents.
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products | Cutting Tools, Tool Holding, Fluids & Carbide Components | ASV Precision" },
-      { name: "description", content: "Explore industrial product categories from ASV Precision including cutting tools, drilling solutions, tool holding systems, metalworking fluids and carbide components." },
+      { title: "Products | Cutting Tools, Tool Holding, Fluids & Carbide Components | ASV Engineering Solutions" },
+      { name: "description", content: "Explore industrial product categories from ASV Engineering Solutions including cutting tools, drilling solutions, tool holding systems, metalworking fluids and carbide components." },
       { name: "keywords", content: "Industrial Tooling Supplier, CNC Cutting Tools, Tool Holding Systems, Carbide Inserts Supplier, Precision Engineering Solutions, Metalworking Fluids Supplier, Manufacturing Solutions Tamil Nadu, Industrial Engineering Products, CNC Tool Distributor, Industrial Tool Distributor India" },
-      { property: "og:title", content: "Products | ASV Precision" },
+      { property: "og:title", content: "Products | ASV Engineering Solutions" },
       { property: "og:description", content: "Dedicated product categories with correct industrial images and lead generation CTAs." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app/products" },
     ],

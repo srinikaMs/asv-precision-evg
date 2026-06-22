@@ -37,10 +37,10 @@ import imgCarbideRods from "@/assets/prod-carbiderods.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ASV Precision | Industrial Tooling Supplier & CNC Tool Distributor" },
-      { name: "description", content: "ASV Precision is a premium industrial tooling supplier for CNC cutting tools, tool holding systems, carbide inserts, metalworking fluids and precision engineering solutions in Tamil Nadu." },
+      { title: "ASV Engineering Solutions | Industrial Tooling Supplier & CNC Tool Distributor" },
+      { name: "description", content: "ASV Engineering Solutions is a premium industrial tooling supplier for CNC cutting tools, tool holding systems, carbide inserts, metalworking fluids and precision engineering solutions in Tamil Nadu." },
       { name: "keywords", content: "Industrial Tooling Supplier, CNC Cutting Tools, Tool Holding Systems, Carbide Inserts Supplier, Precision Engineering Solutions, Metalworking Fluids Supplier, Manufacturing Solutions Tamil Nadu, Industrial Engineering Products, CNC Tool Distributor, Industrial Tool Distributor India" },
-      { property: "og:title", content: "ASV Precision | Industrial Tooling Supplier" },
+      { property: "og:title", content: "ASV Engineering Solutions | Industrial Tooling Supplier" },
       { property: "og:description", content: "Premium B2B industrial website with correct product visuals, strong SEO and lead generation for manufacturers." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app" },
     ],
@@ -66,7 +66,7 @@ const stats = [
 ];
 
 const aboutPoints = [
-  ["Company Introduction", "ASV Precision is a premium B2B industrial supplier built to support machining, production and engineering teams with dependable tooling solutions."],
+  ["Company Introduction", "ASV Engineering Solutions is a premium B2B industrial supplier built to support machining, production and engineering teams with dependable tooling solutions."],
   ["Industrial Expertise", "Solutions aligned to CNC cutting tools, tool holding systems, carbide inserts, drilling systems and metalworking fluids."],
   ["Manufacturing Support Solutions", "Guidance that helps production teams improve output, tool life and procurement confidence."],
   ["Engineering Excellence", "A focused industrial portfolio supported by clear product positioning and premium-quality visuals."],
@@ -237,7 +237,7 @@ function Home() {
         <div className="container-x grid lg:grid-cols-[0.95fr_1.05fr] gap-14 items-start">
           <Reveal>
             <div>
-              <div className="eyebrow text-brand">About ASV Precision</div>
+              <div className="eyebrow text-brand">About ASV Engineering Solutions</div>
               <h1 className="mt-3 text-3xl md:text-5xl font-extrabold text-navy">Premium industrial support for modern manufacturers</h1>
             </div>
           </Reveal>
@@ -255,7 +255,7 @@ function Home() {
       <section className="py-24" style={{ background: "var(--surface)" }}>
         <div className="container-x">
           <Reveal><div className="eyebrow text-brand text-center">AUTHORIZED DISTRIBUTOR BRANDS</div></Reveal>
-          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Official global brands represented by ASV Precision</h2></Reveal>
+          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Official global brands represented by ASV Engineering Solutions</h2></Reveal>
           <Reveal delay={0.1}><p className="mt-4 text-center text-mute max-w-3xl mx-auto">Official brand logos, country information, product expertise, website links and catalogue actions — presented separately from product categories.</p></Reveal>
           <Stagger className="mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {brandCards.map((brand) => (
@@ -352,7 +352,7 @@ function Home() {
       <section className="py-24" style={{ background: "var(--surface)" }}>
         <div className="container-x grid lg:grid-cols-2 gap-14 items-start">
           <Reveal>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-navy">Why Choose ASV Precision</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-navy">Why Choose ASV Engineering Solutions</h2>
             <p className="mt-4 text-mute max-w-xl">A premium industrial B2B experience built for lead generation, stronger trust and modern manufacturing presentation standards.</p>
           </Reveal>
           <Stagger className="grid sm:grid-cols-2 gap-4">
