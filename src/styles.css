@@ -135,10 +135,18 @@
 @utility animate-marquee-right { animation: marquee-right 40s linear infinite; }
 @utility animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(0.4,0,0.6,1) infinite; }
 
+.hero-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 320px;
+  background: var(--navy);
+}
+
 .hero-swiper,
 .hero-swiper .swiper-wrapper,
 .hero-swiper .swiper-slide { height: 100% !important; }
-.hero-swiper .swiper-pagination { bottom: 24px !important; }
+.hero-swiper .swiper-pagination { bottom: 16px !important; }
 .hero-swiper .swiper-pagination-bullet { background: white; opacity: 0.5; }
 .hero-swiper .swiper-pagination-bullet-active { opacity: 1; background: var(--gold); width: 28px; border-radius: 4px; transition: all .3s; }
 
@@ -152,10 +160,33 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
+  background: var(--navy);
 }
 
-@media (max-width: 767px) {
-  .hero-media { object-position: 64% center; }
+@media (min-width: 768px) {
+  .hero-shell {
+    min-height: 440px;
+  }
+
+  .hero-swiper .swiper-pagination {
+    bottom: 20px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-shell {
+    aspect-ratio: auto;
+    min-height: 560px;
+    height: calc(100vh - 132px);
+  }
+
+  .hero-media {
+    object-fit: cover;
+  }
+
+  .hero-swiper .swiper-pagination {
+    bottom: 24px !important;
+  }
 }

@@ -181,42 +181,43 @@ function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-navy text-white">
-        <Swiper
-          modules={[Autoplay, Pagination, Navigation, EffectFade]}
-          effect="fade"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          loop
-          pagination={{ clickable: true }}
-          navigation={{ prevEl: ".hero-prev", nextEl: ".hero-next" }}
-          className="hero-swiper w-full"
-          style={{ height: "calc(100vh - 132px)", minHeight: "560px" }}
-        >
-          {heroSlides.map((slide, i) => (
-            <SwiperSlide key={slide.brand}>
-              <div className="relative h-full w-full">
-                <img src={slide.image} alt={`${slide.brand} industrial tooling visual`} className="hero-media" loading={i === 0 ? "eager" : "lazy"} />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/25 via-transparent to-navy/8" />
-                <div className="absolute inset-x-0 bottom-10 z-10 flex justify-center px-4">
-                  <div className="flex flex-wrap justify-center gap-3">
-                    <Link to="/products" className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-3.5 font-semibold text-navy hover:bg-blue-50 transition shadow-xl">
-                      Explore Products <ArrowRight className="h-4 w-4" />
-                    </Link>
-                    <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 px-7 py-3.5 font-semibold text-white hover:bg-white/20 transition">
-                      Request a Quote
-                    </Link>
+        <div className="hero-shell">
+          <Swiper
+            modules={[Autoplay, Pagination, Navigation, EffectFade]}
+            effect="fade"
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            loop
+            pagination={{ clickable: true }}
+            navigation={{ prevEl: ".hero-prev", nextEl: ".hero-next" }}
+            className="hero-swiper w-full"
+          >
+            {heroSlides.map((slide, i) => (
+              <SwiperSlide key={slide.brand}>
+                <div className="relative h-full w-full bg-navy">
+                  <img src={slide.image} alt={`${slide.brand} industrial tooling visual`} className="hero-media" loading={i === 0 ? "eager" : "lazy"} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/18 via-transparent to-navy/8" />
+                  <div className="absolute inset-x-0 bottom-5 z-10 flex justify-center px-4 md:bottom-8 lg:bottom-10">
+                    <div className="flex flex-wrap justify-center gap-3">
+                      <Link to="/products" className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 font-semibold text-navy transition hover:bg-blue-50 shadow-xl md:px-7 md:py-3.5">
+                        Explore Products <ArrowRight className="h-4 w-4" />
+                      </Link>
+                      <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20 md:px-7 md:py-3.5">
+                        Request a Quote
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        <button className="hero-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full glass flex items-center justify-center hover:bg-white/20 transition" aria-label="Previous slide">
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </button>
-        <button className="hero-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full glass flex items-center justify-center hover:bg-white/20 transition" aria-label="Next slide">
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button>
+          <button className="hero-prev absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full glass transition hover:bg-white/20 md:left-5 md:h-11 md:w-11 lg:left-8 lg:h-12 lg:w-12" aria-label="Previous slide">
+            <ChevronLeft className="h-5 w-5 text-white md:h-6 md:w-6" />
+          </button>
+          <button className="hero-next absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full glass transition hover:bg-white/20 md:right-5 md:h-11 md:w-11 lg:right-8 lg:h-12 lg:w-12" aria-label="Next slide">
+            <ChevronRight className="h-5 w-5 text-white md:h-6 md:w-6" />
+          </button>
+        </div>
       </section>
 
       <section className="bg-white border-y border-border">
