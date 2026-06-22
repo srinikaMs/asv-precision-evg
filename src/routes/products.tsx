@@ -261,7 +261,11 @@ function Products() {
                           ))}
                         </div>
                         <div className="mt-4 text-xs text-mute">Industries Served: {product.industries.join(" · ")}</div>
-                        <div className="mt-2 text-xs text-mute">Associated Brands: {product.brands.join(" · ")}</div>
+                        <div className="mt-3 flex flex-wrap gap-1.5">
+                          {product.brands.map((b) => (
+                            <span key={b} className="inline-flex items-center gap-1 rounded bg-navy/95 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white ring-1 ring-gold/40">{b}</span>
+                          ))}
+                        </div>
                         <Link to="/products/$slug" params={{ slug: product.slug }} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
                           View Product Details <ArrowRight className="h-4 w-4" />
                         </Link>
