@@ -33,6 +33,7 @@ import imgReplaceableInsertDrills from "@/assets/prod-replaceableinsertdrills.jp
 import imgToolholders from "@/assets/prod-toolholders.jpg";
 import imgCoolant from "@/assets/prod-coolant.jpg";
 import imgCarbideRods from "@/assets/prod-carbiderods.jpg";
+import imgAboutWorkshop from "@/assets/about-workshop.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -239,6 +240,14 @@ function Home() {
             <div>
               <div className="eyebrow text-brand">About ASV Engineering Solutions</div>
               <h1 className="mt-3 text-3xl md:text-5xl font-extrabold text-navy">Premium industrial support for modern manufacturers</h1>
+              <div className="relative mt-8 overflow-hidden rounded-2xl border border-border shadow-xl">
+                <img src={imgAboutWorkshop} alt="ASV Engineering Solutions — precision CNC machining and industrial tooling" className="w-full h-[360px] md:h-[440px] object-cover" loading="lazy" width={1280} height={1024} />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 text-white">
+                  <div className="eyebrow text-gold">Precision Engineering</div>
+                  <div className="mt-1 text-lg font-bold">Genuine tooling. Real performance. Trusted supply.</div>
+                </div>
+              </div>
             </div>
           </Reveal>
           <Stagger className="grid gap-4">

@@ -223,10 +223,15 @@ function Products() {
                   <div className="eyebrow text-brand">Category</div>
                   <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">{category.name}</h2>
                   <p className="mt-4 text-sm text-mute leading-relaxed">{category.description}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {category.brands.map((brand) => (
-                      <span key={brand} className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">{brand}</span>
-                    ))}
+                  <div className="mt-5">
+                    <div className="eyebrow text-brand mb-2">Authorized Distributor Brands</div>
+                    <div className="flex flex-wrap gap-2">
+                      {category.brands.map((brand) => (
+                        <span key={brand} className="inline-flex items-center gap-1.5 rounded-md bg-navy px-3.5 py-1.5 text-sm font-extrabold uppercase tracking-wide text-white shadow-md ring-1 ring-gold/40">
+                          <span className="h-1.5 w-1.5 rounded-full bg-gold" />{brand}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <img src={category.banner} alt={category.name} className="mt-6 rounded-xl w-full h-64 object-cover shadow-md" loading="lazy" />
                   <div className="mt-6 grid gap-3">
