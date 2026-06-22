@@ -6,9 +6,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact ASV Precision | Industrial Tooling Supplier Tamil Nadu" },
-      { name: "description", content: "Request a quote, callback, catalogue or technical support from ASV Precision in Tiruvallur, Tamil Nadu." },
-      { property: "og:title", content: "Contact ASV Precision" },
+      { title: "Contact ASV Engineering Solutions | Industrial Tooling Supplier Tamil Nadu" },
+      { name: "description", content: "Request a quote, callback, catalogue or technical support from ASV Engineering Solutions in Tiruvallur, Tamil Nadu." },
+      { property: "og:title", content: "Contact ASV Engineering Solutions" },
       { property: "og:description", content: "Industrial tooling supplier, CNC tool distributor and engineering support partner in Tamil Nadu." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app/contact" },
     ],
@@ -127,7 +127,7 @@ function Contact() {
 
         <div className="container-x mt-12">
           <div className="rounded-2xl overflow-hidden border border-border shadow-md">
-            <iframe title="ASV Precision Location" src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed" className="w-full h-[400px]" loading="lazy" />
+            <iframe title="ASV Engineering Solutions Location" src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed" className="w-full h-[400px]" loading="lazy" />
           </div>
         </div>
       </section>

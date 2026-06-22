@@ -47,10 +47,10 @@ import imgSpecialCarbideComponents from "@/assets/prod-specialcarbidecomponents.
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products | Cutting Tools, Tool Holding, Fluids & Carbide Components | ASV Precision" },
-      { name: "description", content: "Explore industrial product categories from ASV Precision including cutting tools, drilling solutions, tool holding systems, metalworking fluids and carbide components." },
+      { title: "Products | Cutting Tools, Tool Holding, Fluids & Carbide Components | ASV Engineering Solutions" },
+      { name: "description", content: "Explore industrial product categories from ASV Engineering Solutions including cutting tools, drilling solutions, tool holding systems, metalworking fluids and carbide components." },
       { name: "keywords", content: "Industrial Tooling Supplier, CNC Cutting Tools, Tool Holding Systems, Carbide Inserts Supplier, Precision Engineering Solutions, Metalworking Fluids Supplier, Manufacturing Solutions Tamil Nadu, Industrial Engineering Products, CNC Tool Distributor, Industrial Tool Distributor India" },
-      { property: "og:title", content: "Products | ASV Precision" },
+      { property: "og:title", content: "Products | ASV Engineering Solutions" },
       { property: "og:description", content: "Dedicated product categories with correct industrial images and lead generation CTAs." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app/products" },
     ],
@@ -223,10 +223,15 @@ function Products() {
                   <div className="eyebrow text-brand">Category</div>
                   <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">{category.name}</h2>
                   <p className="mt-4 text-sm text-mute leading-relaxed">{category.description}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {category.brands.map((brand) => (
-                      <span key={brand} className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">{brand}</span>
-                    ))}
+                  <div className="mt-5">
+                    <div className="eyebrow text-brand mb-2">Authorized Distributor Brands</div>
+                    <div className="flex flex-wrap gap-2">
+                      {category.brands.map((brand) => (
+                        <span key={brand} className="inline-flex items-center gap-1.5 rounded-md bg-navy px-3.5 py-1.5 text-sm font-extrabold uppercase tracking-wide text-white shadow-md ring-1 ring-gold/40">
+                          <span className="h-1.5 w-1.5 rounded-full bg-gold" />{brand}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <img src={category.banner} alt={category.name} className="mt-6 rounded-xl w-full h-64 object-cover shadow-md" loading="lazy" />
                   <div className="mt-6 grid gap-3">
@@ -256,7 +261,11 @@ function Products() {
                           ))}
                         </div>
                         <div className="mt-4 text-xs text-mute">Industries Served: {product.industries.join(" · ")}</div>
-                        <div className="mt-2 text-xs text-mute">Associated Brands: {product.brands.join(" · ")}</div>
+                        <div className="mt-3 flex flex-wrap gap-1.5">
+                          {product.brands.map((b) => (
+                            <span key={b} className="inline-flex items-center gap-1 rounded bg-navy/95 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white ring-1 ring-gold/40">{b}</span>
+                          ))}
+                        </div>
                         <Link to="/products/$slug" params={{ slug: product.slug }} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
                           View Product Details <ArrowRight className="h-4 w-4" />
                         </Link>

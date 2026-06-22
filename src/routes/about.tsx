@@ -5,9 +5,9 @@ import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ASV Precision | Precision Engineering Solutions Tamil Nadu" },
-      { name: "description", content: "Learn about ASV Precision, a premium industrial tooling supplier focused on engineering excellence, manufacturing support and technical assistance." },
-      { property: "og:title", content: "About ASV Precision" },
+      { title: "About ASV Engineering Solutions | Precision Engineering Solutions Tamil Nadu" },
+      { name: "description", content: "Learn about ASV Engineering Solutions, a premium industrial tooling supplier focused on engineering excellence, manufacturing support and technical assistance." },
+      { property: "og:title", content: "About ASV Engineering Solutions" },
       { property: "og:description", content: "Industrial expertise, manufacturing support solutions and technical assistance for modern manufacturers." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app/about" },
     ],
@@ -25,7 +25,7 @@ const values = [
 
 const strengths = [
   [Cog, "Industrial Expertise", "Solutions aligned to CNC machining, holemaking, tool holding, carbide applications and process improvement."],
-  [Wrench, "Manufacturing Support Solutions", "From product selection to process support, ASV Precision helps reduce downtime and improve output."],
+  [Wrench, "Manufacturing Support Solutions", "From product selection to process support, ASV Engineering Solutions helps reduce downtime and improve output."],
   [ShieldCheck, "Technical Assistance", "Support for cutting parameters, coolant choices, toolholding and machining performance optimization."],
 ];
 
@@ -35,7 +35,7 @@ function About() {
       <section className="hero-grad text-white py-24">
         <div className="container-x">
           <div className="text-xs text-white/60"><Link to="/" className="hover:text-white">Home</Link> / About</div>
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold max-w-3xl">About ASV Precision</h1>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold max-w-3xl">About ASV Engineering Solutions</h1>
           <p className="mt-5 max-w-2xl text-white/70">A premium B2B industrial company built around genuine supply, manufacturing support solutions, engineering excellence and technical assistance.</p>
         </div>
       </section>
@@ -47,10 +47,10 @@ function About() {
               <div className="eyebrow text-brand">Company Overview</div>
               <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">Built to support modern manufacturing</h2>
               <p className="mt-5 text-mute leading-relaxed">
-                ASV Precision serves manufacturers with a focused portfolio of industrial tooling, metalworking support products and application-driven engineering service. The business is built around performance, responsiveness and premium industrial standards.
+                ASV Engineering Solutions serves manufacturers with a focused portfolio of industrial tooling, metalworking support products and application-driven engineering service. The business is built around performance, responsiveness and premium industrial standards.
               </p>
               <p className="mt-4 text-mute leading-relaxed">
-                From CNC cutting tools and tool holding systems to carbide components and fluids, ASV Precision supports production teams that need reliable recommendations, genuine products and strong commercial follow-through.
+                From CNC cutting tools and tool holding systems to carbide components and fluids, ASV Engineering Solutions supports production teams that need reliable recommendations, genuine products and strong commercial follow-through.
               </p>
             </div>
           </Reveal>
@@ -85,7 +85,7 @@ function About() {
 
       <section className="bg-white py-20">
         <div className="container-x">
-          <Reveal><div className="eyebrow text-brand text-center">Why Choose ASV Precision</div></Reveal>
+          <Reveal><div className="eyebrow text-brand text-center">Why Choose ASV Engineering Solutions</div></Reveal>
           <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Reliable industrial support at every stage</h2></Reveal>
           <Stagger className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map(([Icon, t, d]) => (
@@ -107,7 +107,7 @@ function About() {
           <Reveal delay={0.05}><p className="mt-3 text-center text-mute">No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001</p></Reveal>
           <Reveal delay={0.1}>
             <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-md">
-              <iframe title="ASV Precision Location" src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed" className="w-full h-[420px]" loading="lazy" />
+              <iframe title="ASV Engineering Solutions Location" src="https://www.google.com/maps?q=No.3,+60+Feet+Road,+V.M+Nagar+Extn,+JJ+Salai,+Tiruvallur,+Tamil+Nadu+602001&output=embed" className="w-full h-[420px]" loading="lazy" />
             </div>
           </Reveal>
         </div>
