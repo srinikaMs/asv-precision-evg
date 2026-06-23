@@ -90,13 +90,6 @@ const brandCards = [
     website: "https://www.duracarb.com/",
   },
   {
-    name: "Duracarb",
-    country: "USA",
-    description: "Specialist in carbide tooling and precision industrial carbide solutions.",
-    expertise: "Carbide tools, wear components, custom carbide products",
-    website: "https://www.duracarb.com/",
-  },
-  {
     name: "Boehlerit",
     country: "Austria",
     description: "Premium manufacturer of carbide and indexable tooling solutions for advanced machining.",
