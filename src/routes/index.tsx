@@ -190,12 +190,12 @@ function Home() {
                 <div className="relative h-full w-full bg-navy">
                   <img src={slide.image} alt={`${slide.brand} industrial tooling visual`} className="hero-media" loading={i === 0 ? "eager" : "lazy"} />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/18 via-transparent to-navy/8" />
-                  <div className="absolute inset-x-0 bottom-5 z-10 flex justify-center px-4 md:bottom-8 lg:bottom-10">
-                    <div className="flex flex-wrap justify-center gap-3">
-                      <Link to="/products" className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 font-semibold text-navy transition hover:bg-blue-50 shadow-xl md:px-7 md:py-3.5">
-                        Explore Products <ArrowRight className="h-4 w-4" />
+                  <div className="absolute inset-x-0 bottom-12 z-10 flex justify-center px-4 md:bottom-16 lg:bottom-20">
+                    <div className="flex flex-row items-center justify-center gap-2 md:gap-3">
+                      <Link to="/products" className="inline-flex items-center gap-1.5 rounded-md bg-white px-3.5 py-2 text-xs font-semibold text-navy shadow-xl transition hover:bg-blue-50 sm:px-5 sm:py-2.5 sm:text-sm md:px-7 md:py-3.5 md:text-base">
+                        Explore Products <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                       </Link>
-                      <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20 md:px-7 md:py-3.5">
+                      <Link to="/contact" className="inline-flex items-center gap-1.5 rounded-md border border-white/40 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-white/20 sm:px-5 sm:py-2.5 sm:text-sm md:px-7 md:py-3.5 md:text-base">
                         Request a Quote
                       </Link>
                     </div>
