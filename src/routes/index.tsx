@@ -83,11 +83,11 @@ const brandCards = [
     website: "https://www.osg.co.jp/en/",
   },
   {
-    name: "Allied Machine",
+    name: "Duracarb",
     country: "USA",
-    description: "Industrial holemaking specialist delivering high-performance drilling and hole finishing solutions.",
-    expertise: "Replaceable insert drills, deep hole drills, holemaking",
-    website: "https://www.alliedmachine.com/homepage/",
+    description: "Specialist in carbide tooling and precision industrial carbide solutions.",
+    expertise: "Carbide tools, wear components, custom carbide products",
+    website: "https://www.duracarb.com/",
   },
   {
     name: "Duracarb",
