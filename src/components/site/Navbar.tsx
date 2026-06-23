@@ -101,11 +101,12 @@ export function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-navy text-white"
+            className="fixed inset-0 z-[100] text-white overflow-y-auto"
+            style={{ backgroundColor: "#09182f" }}
           >
-            <div className="container-x flex h-24 items-center justify-between">
-              <img src={logo.url} alt="ASV Engineering Solutions" className="h-14 w-auto" />
-              <button onClick={() => setOpen(false)} aria-label="Close">
+            <div className="container-x flex h-24 items-center justify-between border-b border-white/10">
+              <img src={logo.url} alt="ASV Engineering Solutions" className="h-14 w-auto brightness-0 invert" />
+              <button onClick={() => setOpen(false)} aria-label="Close" className="rounded-md p-2 hover:bg-white/10">
                 <X className="h-7 w-7" />
               </button>
             </div>
