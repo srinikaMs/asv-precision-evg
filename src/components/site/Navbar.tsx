@@ -4,15 +4,14 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/asv-logo.png.asset.json";
 
-const brands = [
-  { name: "OSG", desc: "Cutting Tools — Japan" },
-  { name: "Allied Machine", desc: "Holemaking — USA" },
-  { name: "Master Fluid Solutions", desc: "Metalworking Fluids — USA" },
-  { name: "Boehlerit", desc: "Carbide Inserts — Austria" },
-  { name: "KTA Spindle Toolings", desc: "Tool Holding Systems" },
-  { name: "ANEC", desc: "Cutting & Machining Solutions" },
-  { name: "Duracarb", desc: "Carbide Solutions" },
+const productCategories = [
+  { name: "Cutting Tools", hash: "cutting-tools", desc: "Inserts, End Mills, Turning" },
+  { name: "Drilling & Holemaking", hash: "drilling-holemaking-solutions", desc: "Drills, Reamers, Chamfer" },
+  { name: "Tool Holding Systems", hash: "tool-holding-systems", desc: "BT, HSK, Collets, Shrink Fit" },
+  { name: "Metalworking Fluids & Coolants", hash: "metalworking-fluids-coolants", desc: "Coolants, Grinding, Cleaners" },
+  { name: "Wear Protection & Carbide", hash: "wear-protection-carbide-components", desc: "Rods, Blanks, Wear Parts" },
 ];
+
 
 const navLinks = [
   { to: "/", label: "Home" },
