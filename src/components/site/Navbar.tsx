@@ -40,7 +40,7 @@ export function Navbar() {
     >
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 lg:flex lg:justify-between lg:gap-6">
         <Link to="/" className="flex min-w-0 items-center gap-4">
-          <img src={logo.url} alt="ASV Engineering Solutions" className="h-14 w-auto shrink-0 md:h-16 lg:h-20" />
+          <img src={logo.url} alt="ASV Engineering Solutions" className="h-16 w-auto shrink-0 md:h-20 lg:h-24" />
           <div className="hidden min-w-0 leading-tight md:block">
             <div className="truncate font-extrabold text-ink text-[18px] tracking-tight">ASV Engineering Solutions</div>
             <div className="truncate text-[12px] text-mute">Industrial Tooling & Engineering Solutions</div>
@@ -106,7 +106,7 @@ export function Navbar() {
             style={{ backgroundColor: "#09182f" }}
           >
             <div className="container-x flex h-24 items-center justify-between border-b border-white/10">
-              <img src={logo.url} alt="ASV Engineering Solutions" className="h-14 w-auto brightness-0 invert" />
+              <img src={logo.url} alt="ASV Engineering Solutions" className="h-16 w-auto brightness-0 invert" />
               <button onClick={() => setOpen(false)} aria-label="Close" className="rounded-md p-2 hover:bg-white/10">
                 <X className="h-7 w-7" />
               </button>
