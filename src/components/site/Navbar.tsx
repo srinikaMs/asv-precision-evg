@@ -58,16 +58,18 @@ export function Navbar() {
             </Link>
             <div className="invisible absolute left-0 top-full w-80 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
               <div className="rounded-xl bg-white border border-border shadow-xl p-2">
-                {brands.map((b) => (
+                {productCategories.map((b) => (
                   <Link
-                    key={b.name}
+                    key={b.hash}
                     to="/products"
-                    className="flex items-center justify-between rounded-lg px-3 py-2.5 hover:bg-brand-soft"
+                    hash={b.hash}
+                    className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 hover:bg-brand-soft"
                   >
                     <span className="font-semibold text-ink">{b.name}</span>
-                    <span className="text-xs text-mute">{b.desc}</span>
+                    <span className="text-xs text-mute text-right">{b.desc}</span>
                   </Link>
                 ))}
+
               </div>
             </div>
           </div>
