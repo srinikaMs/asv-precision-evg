@@ -4,15 +4,14 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/asv-logo.png.asset.json";
 
-const brands = [
-  { name: "OSG", desc: "Cutting Tools — Japan" },
-  { name: "Allied Machine", desc: "Holemaking — USA" },
-  { name: "Master Fluid Solutions", desc: "Metalworking Fluids — USA" },
-  { name: "Boehlerit", desc: "Carbide Inserts — Austria" },
-  { name: "KTA Spindle Toolings", desc: "Tool Holding Systems" },
-  { name: "ANEC", desc: "Cutting & Machining Solutions" },
-  { name: "Duracarb", desc: "Carbide Solutions" },
+const productCategories = [
+  { name: "Cutting Tools", hash: "cutting-tools", desc: "Inserts, End Mills, Turning" },
+  { name: "Drilling & Holemaking", hash: "drilling-holemaking-solutions", desc: "Drills, Reamers, Chamfer" },
+  { name: "Tool Holding Systems", hash: "tool-holding-systems", desc: "BT, HSK, Collets, Shrink Fit" },
+  { name: "Metalworking Fluids & Coolants", hash: "metalworking-fluids-coolants", desc: "Coolants, Grinding, Cleaners" },
+  { name: "Wear Protection & Carbide", hash: "wear-protection-carbide-components", desc: "Rods, Blanks, Wear Parts" },
 ];
+
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -59,16 +58,18 @@ export function Navbar() {
             </Link>
             <div className="invisible absolute left-0 top-full w-80 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
               <div className="rounded-xl bg-white border border-border shadow-xl p-2">
-                {brands.map((b) => (
+                {productCategories.map((b) => (
                   <Link
-                    key={b.name}
+                    key={b.hash}
                     to="/products"
-                    className="flex items-center justify-between rounded-lg px-3 py-2.5 hover:bg-brand-soft"
+                    hash={b.hash}
+                    className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 hover:bg-brand-soft"
                   >
                     <span className="font-semibold text-ink">{b.name}</span>
-                    <span className="text-xs text-mute">{b.desc}</span>
+                    <span className="text-xs text-mute text-right">{b.desc}</span>
                   </Link>
                 ))}
+
               </div>
             </div>
           </div>
