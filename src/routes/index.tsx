@@ -22,6 +22,8 @@ import {
 } from "lucide-react";
 import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
 import { Counter } from "../components/site/Counter";
+import { clients } from "@/data/clients";
+
 import heroOsg from "@/assets/hero-osg.png.asset.json";
 import heroMasterFluid from "@/assets/hero-master-fluid.png.asset.json";
 import heroBoehlerit from "@/assets/hero-boehlerit.png.asset.json";
