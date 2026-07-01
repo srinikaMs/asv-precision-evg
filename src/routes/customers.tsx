@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
+import { clients } from "@/data/clients";
 
 export const Route = createFileRoute("/customers")({
   head: () => ({
@@ -16,21 +17,8 @@ export const Route = createFileRoute("/customers")({
   component: Customers,
 });
 
-const manufacturers = [
-  "Brakes India",
-  "Turbo Energy",
-  "ABI-Showatech",
-  "Wheels India Limited",
-  "Sundram Fasteners Limited",
-  "Axles India Limited",
-  "Real Talent Engineering",
-  "Sundaram-Clayton Limited",
-  "Hyundai WIA",
-  "SOMIC ZF Components",
-  "FLSmidth",
-];
-
 const groups = [
+
   ["Automotive", "Tooling support for brake systems, axles, transmission parts, engine components and high-volume CNC machining lines."],
   ["Heavy Engineering", "Precision inserts, drilling systems, carbide tooling and fluids for large engineered components and process equipment."],
   ["Precision Manufacturing", "Consistent tooling supply for close-tolerance parts, fixture components, special jobs and repeat production programs."],
