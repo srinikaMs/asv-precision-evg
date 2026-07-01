@@ -334,20 +334,24 @@ function Home() {
           <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Trusted by production-driven manufacturers</h2></Reveal>
           <div className="mt-12 space-y-4 overflow-hidden">
             {[
-              { items: manufacturersA, dir: "animate-marquee-left" },
-              { items: manufacturersB, dir: "animate-marquee-right" },
+              { items: clients.slice(0, 5), dir: "animate-marquee-left" },
+              { items: clients.slice(5), dir: "animate-marquee-right" },
             ].map(({ items, dir }, idx) => (
               <div key={idx} className="overflow-hidden">
                 <div className={`flex gap-4 w-max ${dir} hover:[animation-play-state:paused]`}>
                   {[...items, ...items].map((c, i) => (
-                    <div key={`${c}-${i}`} className="shrink-0 bg-white border border-border rounded-lg px-7 py-5 font-bold text-ink hover:bg-brand-soft transition min-w-[240px] text-center shadow-sm">
-                      {c}
+                    <div key={`${c.name}-${i}`} className="shrink-0 flex flex-col items-center justify-center bg-white border border-border rounded-xl px-6 py-4 min-w-[220px] shadow-sm hover:bg-brand-soft transition">
+                      <div className="flex h-16 items-center justify-center">
+                        <img src={c.logo} alt={`${c.name} logo`} loading="lazy" className="max-h-14 max-w-[160px] object-contain" />
+                      </div>
+                      <div className="mt-2 text-xs font-bold text-ink text-center">{c.name}</div>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
