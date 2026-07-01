@@ -28,7 +28,7 @@ import heroOsg from "@/assets/hero-osg.png.asset.json";
 import heroMasterFluid from "@/assets/hero-master-fluid.png.asset.json";
 import heroBoehlerit from "@/assets/hero-boehlerit.png.asset.json";
 import heroKta from "@/assets/hero-kta.png.asset.json";
-import heroAnec from "@/assets/hero-anec.png.asset.json";
+import heroAmec from "@/assets/hero-amec.png.asset.json";
 import heroDuracarb from "@/assets/hero-duracarb.png.asset.json";
 import imgCarbideInserts from "@/assets/prod-carbideinserts.jpg";
 import imgReplaceableInsertDrills from "@/assets/prod-replaceableinsertdrills.jpg";
@@ -57,7 +57,7 @@ const heroSlides = [
   { brand: "Master Fluid Solutions", image: heroMasterFluid.url },
   { brand: "Boehlerit", image: heroBoehlerit.url },
   { brand: "KTA Spindle Toolings", image: heroKta.url },
-  { brand: "ANEC", image: heroAnec.url },
+  { brand: "AMEC", image: heroAmec.url },
   { brand: "Duracarb", image: heroDuracarb.url },
 ];
 
