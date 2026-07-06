@@ -295,6 +295,60 @@ function Products() {
         </div>
       </section>
 
+      {brandShowcases.map((showcase, sIdx) => (
+        <section
+          key={showcase.brand}
+          className={sIdx % 2 === 0 ? "bg-white py-20" : "py-20"}
+          style={sIdx % 2 ? { background: "var(--surface)" } : undefined}
+        >
+          <div className="container-x">
+            <Reveal>
+              <div className="text-center max-w-3xl mx-auto">
+                <div className={`inline-block eyebrow text-white px-4 py-1.5 rounded-full bg-gradient-to-r ${showcase.accent}`}>Authorized Distributor</div>
+                <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-navy tracking-tight">{showcase.brand}</h2>
+                <p className="mt-3 text-mute md:text-lg">{showcase.tagline}</p>
+              </div>
+            </Reveal>
+
+            <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6 snap-x snap-mandatory md:snap-none overflow-x-auto md:overflow-visible scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {showcase.products.map((p) => (
+                  <Item key={p.name} variants={itemVariants} className="snap-start">
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group relative block overflow-hidden rounded-[22px] border border-white/60 bg-white/70 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(15,27,61,0.25)] transition-all duration-500 ease-out hover:-translate-y-2 hover:rotate-[-0.4deg] hover:shadow-[0_30px_60px_-20px_rgba(15,27,61,0.45)] cursor-pointer"
+                    >
+                      <div className="relative aspect-[4/5] overflow-hidden">
+                        <img
+                          src={p.image}
+                          alt={`${showcase.brand} ${p.name}`}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-110"
+                        />
+                        <div className={`pointer-events-none absolute inset-0 bg-gradient-to-t ${showcase.accent} opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-40`} />
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy/85 via-navy/40 to-transparent" />
+                        <div className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/95 text-navy shadow-md transition-all duration-500 group-hover:bg-brand group-hover:text-white group-hover:rotate-45">
+                          <ArrowRight className="h-4 w-4" />
+                        </div>
+                      </div>
+                      <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/70 transition-all duration-500 group-hover:text-gold">{showcase.brand}</div>
+                        <h3 className="mt-1 text-base md:text-lg font-extrabold leading-tight transition-transform duration-500 group-hover:-translate-y-0.5">{p.name}</h3>
+                        <div className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-semibold text-white/0 transition-all duration-500 group-hover:text-white">
+                          Explore <ExternalLink className="h-3 w-3" />
+                        </div>
+                      </div>
+                    </a>
+                  </Item>
+                ))}
+            </Stagger>
+          </div>
+        </section>
+      ))}
+
+
+
       {categories.map((category, idx) => (
         <section key={category.id} id={category.id} className={idx % 2 === 0 ? "bg-white py-20 scroll-mt-24" : "py-20 scroll-mt-24"} style={idx % 2 ? { background: "var(--surface)" } : undefined}>
           <div className="container-x">
