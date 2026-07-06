@@ -175,6 +175,87 @@ const brandLinks = [
   { label: "Duracarb", url: "https://www.duracarb.com/" },
 ];
 
+type BrandProduct = { name: string; url: string; image: string };
+type BrandShowcase = { brand: string; tagline: string; accent: string; products: BrandProduct[] };
+
+const brandShowcases: BrandShowcase[] = [
+  {
+    brand: "OSG",
+    tagline: "Shaping Tomorrow Through Innovation",
+    accent: "from-blue-600 to-navy",
+    products: [
+      { name: "Taps", url: "https://www.osg.co.jp/en/products/tap/", image: imgTaps },
+      { name: "Drills", url: "https://www.osg.co.jp/en/products/drill/", image: imgDrills },
+      { name: "End Mills", url: "https://www.osg.co.jp/en/products/endmill/", image: imgEndmills },
+      { name: "Indexable", url: "https://www.osg.co.jp/en/products/indexable/index.html", image: imgIndexable },
+      { name: "Thread Mills", url: "https://www.osg.co.jp/en/products/threadmill/index.html", image: imgThreading },
+      { name: "Dies", url: "https://www.osg.co.jp/en/products/dies/index.html", image: imgCarbideDies },
+      { name: "Gauges", url: "https://www.osg.co.jp/en/products/gauge/index.html", image: imgBoreGauge },
+      { name: "Tooling Systems", url: "https://www.osg.co.jp/en/products/tooling/index.html", image: imgToolholders },
+      { name: "Others", url: "https://www.osg.co.jp/en/products/others/index.html", image: imgCustom },
+      { name: "Tool Reconditioning", url: "https://www.osg.co.jp/en/products/re_grind/index.html", image: imgRegrinding },
+    ],
+  },
+  {
+    brand: "Master Fluid Solutions",
+    tagline: "Complete Solutions for Metalworking Fluids",
+    accent: "from-teal-600 to-navy",
+    products: [
+      { name: "TRIM®", url: "https://www.masterfluids.com/in/en-in/products/brand-and-application.php?brand_cat=C29C", image: imgCoolant },
+      { name: "WEDOLiT®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=B10B&limit=brand", image: imgCuttingoil },
+      { name: "Master STAGES®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=B2B&limit=brand", image: imgSynthetic },
+      { name: "XYBEX®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=A2A&limit=brand", image: imgRustprev },
+    ],
+  },
+  {
+    brand: "Duracarb",
+    tagline: "Built for Precision. Made to Last.",
+    accent: "from-red-600 to-navy",
+    products: [
+      { name: "Grooving", url: "https://www.duracarb-india.com/home-page/dcut/", image: imgGroovingParting },
+      { name: "Drilling", url: "https://www.duracarb-india.com/ddrill/", image: imgDrills },
+      { name: "Turning", url: "https://www.duracarb-india.com/dturn/", image: imgTurningTools },
+      { name: "Milling", url: "https://www.duracarb-india.com/dmill/", image: imgMillingCutters },
+    ],
+  },
+  {
+    brand: "Boehlerit",
+    tagline: "Precision · Performance · Productivity",
+    accent: "from-blue-700 to-navy",
+    products: [
+      { name: "Turning", url: "https://www.boehlerit.com/en/products/machining/turning/", image: imgTurningTools },
+      { name: "Milling", url: "https://www.boehlerit.com/en/products/machining/milling/", image: imgMillingCutters },
+      { name: "Drilling", url: "https://www.boehlerit.com/en/products/machining/drilling/", image: imgDrills },
+      { name: "Grooving & Threading", url: "https://www.boehlerit.com/en/products/machining/grooving-parting-off/", image: imgGroovingParting },
+      { name: "Wear Protection", url: "https://www.boehlerit.com/en/products/wear-protection/", image: imgWearParts },
+    ],
+  },
+  {
+    brand: "KTA Spindle Toolings",
+    tagline: "Precision Tools. Performance Assured.",
+    accent: "from-yellow-500 to-navy",
+    products: [
+      { name: "BT Tool Holders", url: "https://www.ktaspindletoolings.com/", image: imgBtToolholders },
+      { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: imgHskHolders },
+      { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: imgHydraulicChucks },
+      { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: imgCollets },
+      { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: imgShrinkfit },
+    ],
+  },
+  {
+    brand: "Allied Machine (AMEC · Wohlhaupter · T-A Pro)",
+    tagline: "The Holemaking Specialists",
+    accent: "from-red-700 to-navy",
+    products: [
+      { name: "T-A Pro®", url: "https://www.alliedmachine.com/products/spade-drilling/t-a-pro/", image: imgReplaceableInsertDrills },
+      { name: "AMEC®", url: "https://www.alliedmachine.com/products/insert-drilling/amec/", image: imgIndexable },
+      { name: "Wohlhaupter®", url: "https://www.alliedmachine.com/products/precision-boring/", image: imgBoringHead },
+      { name: "Deep Hole Drilling", url: "https://www.alliedmachine.com/products/deep-hole-drilling/", image: imgDeepHoleDrills },
+    ],
+  },
+];
+
+
 function Products() {
   return (
     <>
