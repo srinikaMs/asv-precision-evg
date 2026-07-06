@@ -342,11 +342,11 @@ function Home() {
               <div key={idx} className="overflow-hidden">
                 <div className={`flex gap-4 w-max ${dir} hover:[animation-play-state:paused]`}>
                   {[...items, ...items].map((c, i) => (
-                    <div key={`${c.name}-${i}`} className="shrink-0 flex flex-col items-center justify-center bg-white border border-border rounded-xl px-6 py-4 min-w-[220px] shadow-sm hover:bg-brand-soft transition">
-                      <div className="flex h-16 items-center justify-center">
-                        <img src={c.logo} alt={`${c.name} logo`} loading="lazy" className="max-h-14 max-w-[160px] object-contain" />
+                    <div key={`${c.name}-${i}`} className="shrink-0 flex flex-col items-center justify-center bg-white border border-border rounded-xl px-8 py-6 min-w-[260px] shadow-sm hover:bg-brand-soft transition">
+                      <div className="flex h-24 items-center justify-center">
+                        <img src={c.logo} alt={`${c.name} logo`} loading="lazy" className="max-h-20 max-w-[220px] object-contain" />
                       </div>
-                      <div className="mt-2 text-xs font-bold text-ink text-center">{c.name}</div>
+                      <div className="mt-3 text-sm font-bold text-ink text-center">{c.name}</div>
                     </div>
                   ))}
                 </div>
