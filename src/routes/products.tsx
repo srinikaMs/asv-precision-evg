@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Download, Phone } from "lucide-react";
+import { ArrowRight, Check, Download, Phone, ExternalLink } from "lucide-react";
 import { Reveal, Stagger, Item, itemVariants } from "../components/site/Reveal";
 
 import imgTaps from "@/assets/prod-taps.jpg";
