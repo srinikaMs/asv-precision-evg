@@ -103,6 +103,43 @@ function About() {
 
       <section className="py-20" style={{ background: "var(--surface)" }}>
         <div className="container-x">
+          <Reveal><div className="eyebrow text-brand text-center">Our Team</div></Reveal>
+          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">The People Behind ASV</h2></Reveal>
+          <Stagger className="mt-12 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                initials: "AS",
+                name: "Mr. A. Suresh",
+                role: "Proprietor",
+                bio: "Founder of ASV Engineering Solutions with deep roots in Tamil Nadu's manufacturing community.",
+              },
+              {
+                initials: "ND",
+                name: "Nandhan D",
+                role: "Sales & Application Manager",
+                bio: "Hands-on application engineer providing tool selection, parameter optimization and on-floor troubleshooting.",
+              },
+            ].map((person) => (
+              <Item key={person.name} variants={itemVariants} className="rounded-2xl border border-border bg-white p-8 shadow-sm hover:-translate-y-1 hover:shadow-xl transition">
+                <div className="flex items-center gap-5">
+                  <div className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-gradient-to-br from-brand to-navy text-white text-2xl font-extrabold shadow-md">
+                    {person.initials}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xl font-extrabold text-navy">{person.name}</h3>
+                    <div className="mt-1 text-sm font-semibold text-brand">{person.role}</div>
+                  </div>
+                </div>
+                <p className="mt-5 text-sm text-mute leading-relaxed">{person.bio}</p>
+              </Item>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+
+        <div className="container-x">
           <Reveal><h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center">Find us in Tiruvallur</h2></Reveal>
           <Reveal delay={0.05}><p className="mt-3 text-center text-mute">No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001</p></Reveal>
           <Reveal delay={0.1}>

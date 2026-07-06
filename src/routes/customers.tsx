@@ -41,11 +41,11 @@ function Customers() {
           <Reveal delay={0.05}><h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">A growing manufacturing network across Tamil Nadu</h2></Reveal>
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
             {clients.map((c) => (
-              <div key={c.name} className="group flex flex-col items-center justify-between rounded-xl border border-border bg-white p-5 shadow-sm hover:-translate-y-1 hover:shadow-lg transition">
-                <div className="flex h-24 w-full items-center justify-center">
-                  <img src={c.logo} alt={`${c.name} logo`} loading="lazy" className="max-h-20 max-w-full object-contain" />
+              <div key={c.name} className="group flex flex-col items-center justify-between rounded-xl border border-border bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg transition">
+                <div className="flex h-36 w-full items-center justify-center">
+                  <img src={c.logo} alt={`${c.name} logo`} loading="lazy" className="max-h-32 max-w-full object-contain" />
                 </div>
-                <div className="mt-3 text-center text-sm font-bold text-ink">{c.name}</div>
+                <div className="mt-4 text-center text-sm font-bold text-ink">{c.name}</div>
               </div>
             ))}
           </div>

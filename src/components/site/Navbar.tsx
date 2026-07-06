@@ -38,12 +38,12 @@ export function Navbar() {
         scrolled ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]" : "bg-white/95 backdrop-blur"
       }`}
     >
-      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 lg:flex lg:justify-between lg:gap-6">
-        <Link to="/" className="flex min-w-0 items-center gap-4">
-          <img src={logo.url} alt="ASV Engineering Solutions" className="h-16 w-auto shrink-0 md:h-20 lg:h-24" />
-          <div className="hidden min-w-0 leading-tight md:block">
-            <div className="truncate font-extrabold text-ink text-[18px] tracking-tight">ASV Engineering Solutions</div>
-            <div className="truncate text-[12px] text-mute">Industrial Tooling & Engineering Solutions</div>
+      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 lg:flex lg:justify-between lg:gap-6">
+        <Link to="/" className="flex min-w-0 items-center gap-3">
+          <img src={logo.url} alt="ASV Engineering Solutions" className="h-20 w-auto shrink-0 md:h-24 lg:h-28" />
+          <div className="min-w-0 leading-tight">
+            <div className="truncate font-extrabold text-ink text-[15px] sm:text-[17px] md:text-[19px] lg:text-[22px] tracking-tight">ASV Engineering Solutions</div>
+            <div className="hidden truncate text-[11px] md:text-[12px] text-mute sm:block">Industrial Tooling & Engineering Solutions</div>
           </div>
         </Link>
 
