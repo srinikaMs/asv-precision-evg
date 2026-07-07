@@ -123,34 +123,46 @@ const brandCards = [
 
 const productCategories = [
   {
-    title: "Cutting Tools",
-    description: "Carbide inserts, turning tools, milling cutters, end mills, grooving and threading solutions.",
+    title: "OSG",
+    slug: "osg",
+    description: "Taps, drills, end mills, thread mills, indexable tooling, gauges and tool reconditioning.",
     image: imgCarbideInserts,
-    features: ["Actual product images", "Associated brands: OSG · Boehlerit · Duracarb", "Product detail pages"],
+    features: ["Taps · Drills · End Mills", "Thread Mills · Indexable", "Tooling Systems · Reconditioning"],
   },
   {
-    title: "Drilling & Holemaking Solutions",
-    description: "Replaceable insert drills, solid carbide drills, deep hole drills, indexable drills and chamfer tools.",
-    image: imgReplaceableInsertDrills,
-    features: ["Different image per drill type", "Associated brands: Allied Machine · OSG", "Request quote CTAs"],
-  },
-  {
-    title: "Tool Holding Systems",
-    description: "BT holders, HSK holders, collets, hydraulic chucks, tapping chucks and shrink fit holders.",
-    image: imgToolholders,
-    features: ["Correct holder visuals", "Associated brand: KTA Spindle Toolings", "Premium category layout"],
-  },
-  {
-    title: "Metalworking Fluids & Coolants",
-    description: "Cutting fluids, grinding fluids, coolants, forming oils, rust preventives and coolant management solutions.",
+    title: "Master Fluid Solutions",
+    slug: "master-fluid-solutions",
+    description: "TRIM®, WEDOLiT®, Master STAGES® and XYBEX® metalworking fluids and coolants.",
     image: imgCoolant,
-    features: ["Real container visuals", "Associated brand: Master Fluid Solutions", "Catalogue and sales CTAs"],
+    features: ["Cutting Fluids · Coolants", "Cleaners · Rust Preventives", "Coolant Management"],
   },
   {
-    title: "Wear Protection & Carbide Components",
-    description: "Carbide rods, blanks, wear parts, carbide dies and special carbide components.",
+    title: "Duracarb",
+    slug: "duracarb",
+    description: "Turning, milling, drilling and grooving carbide tooling built for precision.",
     image: imgCarbideRods,
-    features: ["Correct carbide component visuals", "Associated brand: Boehlerit", "Dedicated detail pages"],
+    features: ["Turning · Milling", "Drilling · Grooving", "Precision Carbide"],
+  },
+  {
+    title: "Boehlerit",
+    slug: "boehlerit",
+    description: "Carbide inserts, milling, turning, drilling, threading and wear protection solutions.",
+    image: imgReplaceableInsertDrills,
+    features: ["Turning · Milling", "Drilling · Threading", "Wear Protection · Forming"],
+  },
+  {
+    title: "KTA Spindle Toolings",
+    slug: "kta-spindle-toolings",
+    description: "BT holders, HSK holders, hydraulic chucks, collets and shrink fit systems.",
+    image: imgToolholders,
+    features: ["BT · HSK Holders", "Hydraulic · Shrink Fit", "Collets · Chucks"],
+  },
+  {
+    title: "Allied Machine",
+    slug: "allied-machine",
+    description: "AMEC, Wohlhaupter and T-A Pro — the holemaking specialists for drilling, boring, reaming and threading.",
+    image: imgReplaceableInsertDrills,
+    features: ["Drilling · Boring", "Reaming · Threading", "Structural · BT-A"],
   },
 ];
 
@@ -284,22 +296,27 @@ function Home() {
       <section className="bg-white py-24">
         <div className="container-x">
           <Reveal><div className="eyebrow text-brand text-center">Product Categories</div></Reveal>
-          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Products and brands kept completely separate</h2></Reveal>
+          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Explore products by authorized distributor brand</h2></Reveal>
           <Stagger className="mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {productCategories.map((category) => (
               <Item key={category.title} variants={itemVariants} className="rounded-xl overflow-hidden border border-border bg-white shadow-sm hover:-translate-y-1 hover:shadow-xl transition">
-                <img src={category.image} alt={category.title} className="h-52 w-full object-cover" loading="lazy" width={1024} height={1024} />
-                <div className="p-6">
-                  <h3 className="font-bold text-ink text-xl">{category.title}</h3>
-                  <p className="mt-2 text-sm text-mute leading-relaxed">{category.description}</p>
-                  <div className="mt-4 space-y-2">
-                    {category.features.map((feature) => (
-                      <div key={feature} className="inline-flex w-full items-center gap-2 text-xs font-semibold text-brand bg-brand-soft px-3 py-2 rounded">
-                        <ArrowRight className="h-3 w-3" /> {feature}
-                      </div>
-                    ))}
+                <Link to="/products" hash={category.slug} className="block">
+                  <img src={category.image} alt={category.title} className="h-52 w-full object-cover" loading="lazy" width={1024} height={1024} />
+                  <div className="p-6">
+                    <h3 className="font-bold text-ink text-xl">{category.title}</h3>
+                    <p className="mt-2 text-sm text-mute leading-relaxed">{category.description}</p>
+                    <div className="mt-4 space-y-2">
+                      {category.features.map((feature) => (
+                        <div key={feature} className="inline-flex w-full items-center gap-2 text-xs font-semibold text-brand bg-brand-soft px-3 py-2 rounded">
+                          <ArrowRight className="h-3 w-3" /> {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
+                      View Products <ArrowRight className="h-4 w-4" />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </Item>
             ))}
           </Stagger>

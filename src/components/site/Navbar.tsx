@@ -5,11 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/asv-logo.png.asset.json";
 
 const productCategories = [
-  { name: "Cutting Tools", hash: "cutting-tools", desc: "Inserts, End Mills, Turning" },
-  { name: "Drilling & Holemaking", hash: "drilling-holemaking-solutions", desc: "Drills, Reamers, Chamfer" },
-  { name: "Tool Holding Systems", hash: "tool-holding-systems", desc: "BT, HSK, Collets, Shrink Fit" },
-  { name: "Metalworking Fluids & Coolants", hash: "metalworking-fluids-coolants", desc: "Coolants, Grinding, Cleaners" },
-  { name: "Wear Protection & Carbide", hash: "wear-protection-carbide-components", desc: "Rods, Blanks, Wear Parts" },
+  { name: "OSG", hash: "osg", desc: "Taps, Drills, End Mills" },
+  { name: "Master Fluid Solutions", hash: "master-fluid-solutions", desc: "Coolants, Cutting Fluids" },
+  { name: "Duracarb", hash: "duracarb", desc: "Turning, Milling, Drilling" },
+  { name: "Boehlerit", hash: "boehlerit", desc: "Carbide Inserts, Wear Protection" },
+  { name: "KTA Spindle Toolings", hash: "kta-spindle-toolings", desc: "BT, HSK, Collets, Chucks" },
+  { name: "Allied Machine", hash: "allied-machine", desc: "AMEC, Wohlhaupter, T-A Pro" },
 ];
 
 
@@ -38,21 +39,21 @@ export function Navbar() {
         scrolled ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]" : "bg-white/95 backdrop-blur"
       }`}
     >
-      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 lg:flex lg:justify-between lg:gap-6">
+      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-1 lg:flex lg:justify-between lg:gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <img src={logo.url} alt="ASV Engineering Solutions" className="h-20 w-auto shrink-0 md:h-24 lg:h-28" />
+          <img src={logo.url} alt="ASV Engineering Solutions" className="h-[72px] w-auto shrink-0 md:h-[88px] lg:h-[100px]" />
           <div className="min-w-0 leading-tight">
-            <div className="truncate font-extrabold text-ink text-[15px] sm:text-[17px] md:text-[19px] lg:text-[22px] tracking-tight">ASV Engineering Solutions</div>
-            <div className="hidden truncate text-[11px] md:text-[12px] text-mute sm:block">Industrial Tooling & Engineering Solutions</div>
+            <div className="whitespace-nowrap font-extrabold text-ink text-[13px] sm:text-[15px] md:text-[17px] lg:text-[19px] tracking-tight">ASV Engineering Solutions</div>
+            <div className="hidden whitespace-nowrap text-[10px] md:text-[11px] text-mute sm:block">Industrial Tooling & Engineering Solutions</div>
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
-          <Link to="/" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">Home</Link>
+        <nav className="hidden lg:flex items-center gap-0.5">
+          <Link to="/" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">Home</Link>
           <div className="group relative">
             <Link
               to="/products"
-              className="px-4 py-2 text-sm font-medium text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -73,22 +74,23 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">Manufacturers</Link>
-          <Link to="/about" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">Manufacturers</Link>
+          <Link to="/about" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">Contact</Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4 shrink-0">
-          <a href="tel:+919787118179" className="text-sm font-semibold text-ink inline-flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-3 shrink-0">
+          <a href="tel:+919787118179" className="text-[13px] font-semibold text-ink inline-flex items-center gap-1.5">
             <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
           </a>
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-navy transition"
+            className="inline-flex items-center rounded-md bg-brand px-3.5 py-2 text-[13px] font-semibold text-white shadow-md hover:bg-navy transition"
           >
             Request Quote
           </Link>
         </div>
+
 
         <button className="justify-self-end p-2 lg:hidden" onClick={() => setOpen(true)} aria-label="Menu">
           <Menu className="h-7 w-7 text-ink" />

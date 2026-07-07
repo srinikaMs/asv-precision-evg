@@ -176,10 +176,11 @@ const brandLinks = [
 ];
 
 type BrandProduct = { name: string; url: string; image: string };
-type BrandShowcase = { brand: string; tagline: string; accent: string; products: BrandProduct[] };
+type BrandShowcase = { slug: string; brand: string; tagline: string; accent: string; products: BrandProduct[] };
 
 const brandShowcases: BrandShowcase[] = [
   {
+    slug: "osg",
     brand: "OSG",
     tagline: "Shaping Tomorrow Through Innovation",
     accent: "from-blue-600 to-navy",
@@ -197,6 +198,7 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "master-fluid-solutions",
     brand: "Master Fluid Solutions",
     tagline: "Complete Solutions for Metalworking Fluids",
     accent: "from-teal-600 to-navy",
@@ -208,6 +210,7 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "duracarb",
     brand: "Duracarb",
     tagline: "Built for Precision. Made to Last.",
     accent: "from-red-600 to-navy",
@@ -219,18 +222,20 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "boehlerit",
     brand: "Boehlerit",
     tagline: "Precision · Performance · Productivity",
     accent: "from-blue-700 to-navy",
     products: [
-      { name: "Turning", url: "https://www.boehlerit.com/en/products/machining/turning/", image: imgTurningTools },
-      { name: "Milling", url: "https://www.boehlerit.com/en/products/machining/milling/", image: imgMillingCutters },
-      { name: "Drilling", url: "https://www.boehlerit.com/en/products/machining/drilling/", image: imgDrills },
-      { name: "Grooving & Threading", url: "https://www.boehlerit.com/en/products/machining/grooving-parting-off/", image: imgGroovingParting },
-      { name: "Wear Protection", url: "https://www.boehlerit.com/en/products/wear-protection/", image: imgWearParts },
+      { name: "Turning", url: "https://www.boehlerit.com/en/cutting-turning/", image: imgTurningTools },
+      { name: "Milling", url: "https://www.boehlerit.com/en/cutting-milling-english/", image: imgMillingCutters },
+      { name: "Drilling", url: "https://www.boehlerit.com/en/cutting-drilling-threading/", image: imgDrills },
+      { name: "Threading", url: "https://www.boehlerit.com/en/cutting-drilling-threading/#threading", image: imgThreading },
+      { name: "Forming Technology", url: "https://www.boehlerit.com/en/cutting-forming-technology/", image: imgWearParts },
     ],
   },
   {
+    slug: "kta-spindle-toolings",
     brand: "KTA Spindle Toolings",
     tagline: "Precision Tools. Performance Assured.",
     accent: "from-yellow-500 to-navy",
@@ -243,14 +248,19 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "allied-machine",
     brand: "Allied Machine (AMEC · Wohlhaupter · T-A Pro)",
     tagline: "The Holemaking Specialists",
     accent: "from-red-700 to-navy",
     products: [
-      { name: "T-A Pro®", url: "https://www.alliedmachine.com/products/spade-drilling/t-a-pro/", image: imgReplaceableInsertDrills },
-      { name: "AMEC®", url: "https://www.alliedmachine.com/products/insert-drilling/amec/", image: imgIndexable },
-      { name: "Wohlhaupter®", url: "https://www.alliedmachine.com/products/precision-boring/", image: imgBoringHead },
-      { name: "Deep Hole Drilling", url: "https://www.alliedmachine.com/products/deep-hole-drilling/", image: imgDeepHoleDrills },
+      { name: "Drilling", url: "https://www.alliedmachine.com/products/drilling/", image: imgDrills },
+      { name: "Boring", url: "https://www.alliedmachine.com/products/boring/", image: imgBoringHead },
+      { name: "Specials", url: "https://www.alliedmachine.com/products/specials/", image: imgCustom },
+      { name: "Threading", url: "https://www.alliedmachine.com/products/threading/", image: imgThreading },
+      { name: "Reaming", url: "https://www.alliedmachine.com/products/reaming/", image: imgReamers },
+      { name: "Porting (AccuPort 432)", url: "https://www.alliedmachine.com/products/drilling/porting-tools/accuport-432/", image: imgChamferTools },
+      { name: "Structural Steel", url: "https://www.alliedmachine.com/products/drilling/structural-steel-solutions/", image: imgReplaceableInsertDrills },
+      { name: "BT-A Drill", url: "https://www.alliedmachine.com/products/drilling/bta-deep-hole-drilling/bt-a-drill/", image: imgDeepHoleDrills },
     ],
   },
 ];
@@ -265,9 +275,9 @@ function Products() {
           <h1 className="mt-4 text-4xl md:text-5xl font-extrabold">Product Categories</h1>
           <p className="mt-4 max-w-3xl text-white/70">Products and distributor brands are presented separately. Explore product categories with correct industrial images, clear category structure and direct quote/catalogue actions.</p>
           <div className="mt-8 flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <a key={category.id} href={`#${category.id}`} className="glass rounded-full px-4 py-2 text-sm font-semibold hover:bg-white/15 transition">
-                {category.name}
+            {brandShowcases.map((s) => (
+              <a key={s.slug} href={`#${s.slug}`} className="glass rounded-full px-4 py-2 text-sm font-semibold hover:bg-white/15 transition">
+                {s.brand.split(" (")[0]}
               </a>
             ))}
           </div>
@@ -298,7 +308,8 @@ function Products() {
       {brandShowcases.map((showcase, sIdx) => (
         <section
           key={showcase.brand}
-          className={sIdx % 2 === 0 ? "bg-white py-20" : "py-20"}
+          id={showcase.slug}
+          className={sIdx % 2 === 0 ? "bg-white py-20 scroll-mt-24" : "py-20 scroll-mt-24"}
           style={sIdx % 2 ? { background: "var(--surface)" } : undefined}
         >
           <div className="container-x">
@@ -349,70 +360,7 @@ function Products() {
 
 
 
-      {categories.map((category, idx) => (
-        <section key={category.id} id={category.id} className={idx % 2 === 0 ? "bg-white py-20 scroll-mt-24" : "py-20 scroll-mt-24"} style={idx % 2 ? { background: "var(--surface)" } : undefined}>
-          <div className="container-x">
-            <Reveal>
-              <div className="grid lg:grid-cols-[1.05fr_1.95fr] gap-10 items-start">
-                <div>
-                  <div className="eyebrow text-brand">Category</div>
-                  <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">{category.name}</h2>
-                  <p className="mt-4 text-sm text-mute leading-relaxed">{category.description}</p>
-                  <div className="mt-5">
-                    <div className="eyebrow text-brand mb-2">Authorized Distributor Brands</div>
-                    <div className="flex flex-wrap gap-2">
-                      {category.brands.map((brand) => (
-                        <span key={brand} className="inline-flex items-center gap-1.5 rounded-md bg-navy px-3.5 py-1.5 text-sm font-extrabold uppercase tracking-wide text-white shadow-md ring-1 ring-gold/40">
-                          <span className="h-1.5 w-1.5 rounded-full bg-gold" />{brand}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <img src={category.banner} alt={category.name} className="mt-6 rounded-xl w-full h-64 object-cover shadow-md" loading="lazy" />
-                  <div className="mt-6 grid gap-3">
-                    <a href="mailto:sales.asvengg@gmail.com?subject=Catalogue%20Request%20-%20ASV%20Precision" className="inline-flex items-center justify-between rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
-                      Download Catalogue <Download className="h-4 w-4 text-brand" />
-                    </a>
-                    <Link to="/contact" className="inline-flex items-center justify-between rounded-xl bg-brand p-4 font-semibold text-white hover:bg-navy transition">
-                      Request Quote <ArrowRight className="h-4 w-4" />
-                    </Link>
-                    <a href="tel:+919787118179" className="inline-flex items-center justify-between rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
-                      Contact Sales <Phone className="h-4 w-4 text-brand" />
-                    </a>
-                  </div>
-                </div>
-                <Stagger className="grid sm:grid-cols-2 gap-4">
-                  {category.products.map((product) => (
-                    <Item key={product.slug} variants={itemVariants} className="rounded-xl bg-white border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-brand/30 transition">
-                      <img src={product.image} alt={product.name} className="w-full h-44 object-cover" loading="lazy" width={1024} height={1024} />
-                      <div className="p-5">
-                        <h3 className="font-bold text-ink">{product.name}</h3>
-                        <p className="mt-2 text-sm text-mute leading-relaxed">{product.description}</p>
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {product.features.map((feature) => (
-                            <span key={feature} className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-soft px-2.5 py-1 rounded">
-                              <Check className="h-3 w-3" /> {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="mt-4 text-xs text-mute">Industries Served: {product.industries.join(" · ")}</div>
-                        <div className="mt-3 flex flex-wrap gap-1.5">
-                          {product.brands.map((b) => (
-                            <span key={b} className="inline-flex items-center gap-1 rounded bg-navy/95 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white ring-1 ring-gold/40">{b}</span>
-                          ))}
-                        </div>
-                        <Link to="/products/$slug" params={{ slug: product.slug }} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
-                          View Product Details <ArrowRight className="h-4 w-4" />
-                        </Link>
-                      </div>
-                    </Item>
-                  ))}
-                </Stagger>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      ))}
+      {/* Category detail sections hidden — content organized by distributor brand showcases above. */}
 
       <section className="bg-white py-20">
         <div className="container-x">
