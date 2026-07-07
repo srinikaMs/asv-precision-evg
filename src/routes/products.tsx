@@ -176,10 +176,11 @@ const brandLinks = [
 ];
 
 type BrandProduct = { name: string; url: string; image: string };
-type BrandShowcase = { brand: string; tagline: string; accent: string; products: BrandProduct[] };
+type BrandShowcase = { slug: string; brand: string; tagline: string; accent: string; products: BrandProduct[] };
 
 const brandShowcases: BrandShowcase[] = [
   {
+    slug: "osg",
     brand: "OSG",
     tagline: "Shaping Tomorrow Through Innovation",
     accent: "from-blue-600 to-navy",
@@ -197,6 +198,7 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "master-fluid-solutions",
     brand: "Master Fluid Solutions",
     tagline: "Complete Solutions for Metalworking Fluids",
     accent: "from-teal-600 to-navy",
@@ -208,6 +210,7 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "duracarb",
     brand: "Duracarb",
     tagline: "Built for Precision. Made to Last.",
     accent: "from-red-600 to-navy",
@@ -219,18 +222,20 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "boehlerit",
     brand: "Boehlerit",
     tagline: "Precision · Performance · Productivity",
     accent: "from-blue-700 to-navy",
     products: [
-      { name: "Turning", url: "https://www.boehlerit.com/en/products/machining/turning/", image: imgTurningTools },
-      { name: "Milling", url: "https://www.boehlerit.com/en/products/machining/milling/", image: imgMillingCutters },
-      { name: "Drilling", url: "https://www.boehlerit.com/en/products/machining/drilling/", image: imgDrills },
-      { name: "Grooving & Threading", url: "https://www.boehlerit.com/en/products/machining/grooving-parting-off/", image: imgGroovingParting },
-      { name: "Wear Protection", url: "https://www.boehlerit.com/en/products/wear-protection/", image: imgWearParts },
+      { name: "Turning", url: "https://www.boehlerit.com/en/cutting-turning/", image: imgTurningTools },
+      { name: "Milling", url: "https://www.boehlerit.com/en/cutting-milling-english/", image: imgMillingCutters },
+      { name: "Drilling", url: "https://www.boehlerit.com/en/cutting-drilling-threading/", image: imgDrills },
+      { name: "Threading", url: "https://www.boehlerit.com/en/cutting-drilling-threading/#threading", image: imgThreading },
+      { name: "Forming Technology", url: "https://www.boehlerit.com/en/cutting-forming-technology/", image: imgWearParts },
     ],
   },
   {
+    slug: "kta-spindle-toolings",
     brand: "KTA Spindle Toolings",
     tagline: "Precision Tools. Performance Assured.",
     accent: "from-yellow-500 to-navy",
@@ -243,14 +248,19 @@ const brandShowcases: BrandShowcase[] = [
     ],
   },
   {
+    slug: "allied-machine",
     brand: "Allied Machine (AMEC · Wohlhaupter · T-A Pro)",
     tagline: "The Holemaking Specialists",
     accent: "from-red-700 to-navy",
     products: [
-      { name: "T-A Pro®", url: "https://www.alliedmachine.com/products/spade-drilling/t-a-pro/", image: imgReplaceableInsertDrills },
-      { name: "AMEC®", url: "https://www.alliedmachine.com/products/insert-drilling/amec/", image: imgIndexable },
-      { name: "Wohlhaupter®", url: "https://www.alliedmachine.com/products/precision-boring/", image: imgBoringHead },
-      { name: "Deep Hole Drilling", url: "https://www.alliedmachine.com/products/deep-hole-drilling/", image: imgDeepHoleDrills },
+      { name: "Drilling", url: "https://www.alliedmachine.com/products/drilling/", image: imgDrills },
+      { name: "Boring", url: "https://www.alliedmachine.com/products/boring/", image: imgBoringHead },
+      { name: "Specials", url: "https://www.alliedmachine.com/products/specials/", image: imgCustom },
+      { name: "Threading", url: "https://www.alliedmachine.com/products/threading/", image: imgThreading },
+      { name: "Reaming", url: "https://www.alliedmachine.com/products/reaming/", image: imgReamers },
+      { name: "Porting (AccuPort 432)", url: "https://www.alliedmachine.com/products/drilling/porting-tools/accuport-432/", image: imgChamferTools },
+      { name: "Structural Steel", url: "https://www.alliedmachine.com/products/drilling/structural-steel-solutions/", image: imgReplaceableInsertDrills },
+      { name: "BT-A Drill", url: "https://www.alliedmachine.com/products/drilling/bta-deep-hole-drilling/bt-a-drill/", image: imgDeepHoleDrills },
     ],
   },
 ];
