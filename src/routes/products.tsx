@@ -360,70 +360,7 @@ function Products() {
 
 
 
-      {categories.map((category, idx) => (
-        <section key={category.id} id={category.id} className={idx % 2 === 0 ? "bg-white py-20 scroll-mt-24" : "py-20 scroll-mt-24"} style={idx % 2 ? { background: "var(--surface)" } : undefined}>
-          <div className="container-x">
-            <Reveal>
-              <div className="grid lg:grid-cols-[1.05fr_1.95fr] gap-10 items-start">
-                <div>
-                  <div className="eyebrow text-brand">Category</div>
-                  <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-navy">{category.name}</h2>
-                  <p className="mt-4 text-sm text-mute leading-relaxed">{category.description}</p>
-                  <div className="mt-5">
-                    <div className="eyebrow text-brand mb-2">Authorized Distributor Brands</div>
-                    <div className="flex flex-wrap gap-2">
-                      {category.brands.map((brand) => (
-                        <span key={brand} className="inline-flex items-center gap-1.5 rounded-md bg-navy px-3.5 py-1.5 text-sm font-extrabold uppercase tracking-wide text-white shadow-md ring-1 ring-gold/40">
-                          <span className="h-1.5 w-1.5 rounded-full bg-gold" />{brand}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <img src={category.banner} alt={category.name} className="mt-6 rounded-xl w-full h-64 object-cover shadow-md" loading="lazy" />
-                  <div className="mt-6 grid gap-3">
-                    <a href="mailto:sales.asvengg@gmail.com?subject=Catalogue%20Request%20-%20ASV%20Precision" className="inline-flex items-center justify-between rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
-                      Download Catalogue <Download className="h-4 w-4 text-brand" />
-                    </a>
-                    <Link to="/contact" className="inline-flex items-center justify-between rounded-xl bg-brand p-4 font-semibold text-white hover:bg-navy transition">
-                      Request Quote <ArrowRight className="h-4 w-4" />
-                    </Link>
-                    <a href="tel:+919787118179" className="inline-flex items-center justify-between rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
-                      Contact Sales <Phone className="h-4 w-4 text-brand" />
-                    </a>
-                  </div>
-                </div>
-                <Stagger className="grid sm:grid-cols-2 gap-4">
-                  {category.products.map((product) => (
-                    <Item key={product.slug} variants={itemVariants} className="rounded-xl bg-white border border-border overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-brand/30 transition">
-                      <img src={product.image} alt={product.name} className="w-full h-44 object-cover" loading="lazy" width={1024} height={1024} />
-                      <div className="p-5">
-                        <h3 className="font-bold text-ink">{product.name}</h3>
-                        <p className="mt-2 text-sm text-mute leading-relaxed">{product.description}</p>
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {product.features.map((feature) => (
-                            <span key={feature} className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-soft px-2.5 py-1 rounded">
-                              <Check className="h-3 w-3" /> {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="mt-4 text-xs text-mute">Industries Served: {product.industries.join(" · ")}</div>
-                        <div className="mt-3 flex flex-wrap gap-1.5">
-                          {product.brands.map((b) => (
-                            <span key={b} className="inline-flex items-center gap-1 rounded bg-navy/95 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white ring-1 ring-gold/40">{b}</span>
-                          ))}
-                        </div>
-                        <Link to="/products/$slug" params={{ slug: product.slug }} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
-                          View Product Details <ArrowRight className="h-4 w-4" />
-                        </Link>
-                      </div>
-                    </Item>
-                  ))}
-                </Stagger>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      ))}
+      {/* Category detail sections hidden — content organized by distributor brand showcases above. */}
 
       <section className="bg-white py-20">
         <div className="container-x">
