@@ -275,9 +275,9 @@ function Products() {
           <h1 className="mt-4 text-4xl md:text-5xl font-extrabold">Product Categories</h1>
           <p className="mt-4 max-w-3xl text-white/70">Products and distributor brands are presented separately. Explore product categories with correct industrial images, clear category structure and direct quote/catalogue actions.</p>
           <div className="mt-8 flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <a key={category.id} href={`#${category.id}`} className="glass rounded-full px-4 py-2 text-sm font-semibold hover:bg-white/15 transition">
-                {category.name}
+            {brandShowcases.map((s) => (
+              <a key={s.slug} href={`#${s.slug}`} className="glass rounded-full px-4 py-2 text-sm font-semibold hover:bg-white/15 transition">
+                {s.brand.split(" (")[0]}
               </a>
             ))}
           </div>
