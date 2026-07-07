@@ -308,7 +308,8 @@ function Products() {
       {brandShowcases.map((showcase, sIdx) => (
         <section
           key={showcase.brand}
-          className={sIdx % 2 === 0 ? "bg-white py-20" : "py-20"}
+          id={showcase.slug}
+          className={sIdx % 2 === 0 ? "bg-white py-20 scroll-mt-24" : "py-20 scroll-mt-24"}
           style={sIdx % 2 ? { background: "var(--surface)" } : undefined}
         >
           <div className="container-x">
