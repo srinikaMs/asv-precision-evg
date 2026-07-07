@@ -296,22 +296,27 @@ function Home() {
       <section className="bg-white py-24">
         <div className="container-x">
           <Reveal><div className="eyebrow text-brand text-center">Product Categories</div></Reveal>
-          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Products and brands kept completely separate</h2></Reveal>
+          <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Explore products by authorized distributor brand</h2></Reveal>
           <Stagger className="mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {productCategories.map((category) => (
               <Item key={category.title} variants={itemVariants} className="rounded-xl overflow-hidden border border-border bg-white shadow-sm hover:-translate-y-1 hover:shadow-xl transition">
-                <img src={category.image} alt={category.title} className="h-52 w-full object-cover" loading="lazy" width={1024} height={1024} />
-                <div className="p-6">
-                  <h3 className="font-bold text-ink text-xl">{category.title}</h3>
-                  <p className="mt-2 text-sm text-mute leading-relaxed">{category.description}</p>
-                  <div className="mt-4 space-y-2">
-                    {category.features.map((feature) => (
-                      <div key={feature} className="inline-flex w-full items-center gap-2 text-xs font-semibold text-brand bg-brand-soft px-3 py-2 rounded">
-                        <ArrowRight className="h-3 w-3" /> {feature}
-                      </div>
-                    ))}
+                <Link to="/products" hash={category.slug} className="block">
+                  <img src={category.image} alt={category.title} className="h-52 w-full object-cover" loading="lazy" width={1024} height={1024} />
+                  <div className="p-6">
+                    <h3 className="font-bold text-ink text-xl">{category.title}</h3>
+                    <p className="mt-2 text-sm text-mute leading-relaxed">{category.description}</p>
+                    <div className="mt-4 space-y-2">
+                      {category.features.map((feature) => (
+                        <div key={feature} className="inline-flex w-full items-center gap-2 text-xs font-semibold text-brand bg-brand-soft px-3 py-2 rounded">
+                          <ArrowRight className="h-3 w-3" /> {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
+                      View Products <ArrowRight className="h-4 w-4" />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </Item>
             ))}
           </Stagger>
