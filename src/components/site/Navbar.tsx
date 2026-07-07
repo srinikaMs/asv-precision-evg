@@ -5,11 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/asv-logo.png.asset.json";
 
 const productCategories = [
-  { name: "Cutting Tools", hash: "cutting-tools", desc: "Inserts, End Mills, Turning" },
-  { name: "Drilling & Holemaking", hash: "drilling-holemaking-solutions", desc: "Drills, Reamers, Chamfer" },
-  { name: "Tool Holding Systems", hash: "tool-holding-systems", desc: "BT, HSK, Collets, Shrink Fit" },
-  { name: "Metalworking Fluids & Coolants", hash: "metalworking-fluids-coolants", desc: "Coolants, Grinding, Cleaners" },
-  { name: "Wear Protection & Carbide", hash: "wear-protection-carbide-components", desc: "Rods, Blanks, Wear Parts" },
+  { name: "OSG", hash: "osg", desc: "Taps, Drills, End Mills" },
+  { name: "Master Fluid Solutions", hash: "master-fluid-solutions", desc: "Coolants, Cutting Fluids" },
+  { name: "Duracarb", hash: "duracarb", desc: "Turning, Milling, Drilling" },
+  { name: "Boehlerit", hash: "boehlerit", desc: "Carbide Inserts, Wear Protection" },
+  { name: "KTA Spindle Toolings", hash: "kta-spindle-toolings", desc: "BT, HSK, Collets, Chucks" },
+  { name: "Allied Machine", hash: "allied-machine", desc: "AMEC, Wohlhaupter, T-A Pro" },
 ];
 
 
