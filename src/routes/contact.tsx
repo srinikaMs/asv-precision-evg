@@ -46,10 +46,32 @@ function Contact() {
               <h2 className="text-2xl font-bold text-navy">Send your enquiry</h2>
               {sent ? (
                 <div className="mt-6 rounded-lg bg-success/10 text-success p-6 text-center">
-                  Thanks — your enquiry has been received. Our team will contact you shortly.
+                  Thanks — your enquiry has been prepared. Your email app should open now, or please send your details directly to sales.asvengg@gmail.com.
                 </div>
               ) : (
-                <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="mt-6 grid sm:grid-cols-2 gap-4">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.currentTarget;
+                    const fd = new FormData(form);
+                    const get = (k: string) => (fd.get(k) as string | null)?.toString().trim() || "";
+                    const name = get("name");
+                    const company = get("company");
+                    const phone = get("phone");
+                    const email = get("email");
+                    const requestType = get("requestType") || "Request Quote";
+                    const category = get("category");
+                    const product = get("product");
+                    const message = get("message");
+                    const subject = `[${requestType}] ${category || "General"} — ${company || name}`;
+                    const body =
+                      `Name: ${name}\nCompany: ${company}\nPhone: ${phone}\nEmail: ${email}\n\n` +
+                      `Request Type: ${requestType}\nProduct Category: ${category}\nProduct / Requirement: ${product}\n\nMessage:\n${message}\n`;
+                    window.location.href = `mailto:sales.asvengg@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    setSent(true);
+                  }}
+                  className="mt-6 grid sm:grid-cols-2 gap-4"
+                >
                   {[
                     ["Name *", "name", "text", true],
                     ["Company *", "company", "text", true],
@@ -63,7 +85,7 @@ function Contact() {
                   ))}
                   <label className="text-sm">
                     <span className="font-semibold text-ink">Request Type</span>
-                    <select className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 bg-white focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none">
+                    <select name="requestType" className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 bg-white focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none">
                       <option>Request Quote</option>
                       <option>Download Catalogue</option>
                       <option>Request Callback</option>
@@ -72,17 +94,17 @@ function Contact() {
                   </label>
                   <label className="text-sm">
                     <span className="font-semibold text-ink">Product Category</span>
-                    <select className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 bg-white focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none">
+                    <select name="category" className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 bg-white focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none">
                       {productGroups.map((group) => <option key={group}>{group}</option>)}
                     </select>
                   </label>
                   <label className="text-sm sm:col-span-2">
                     <span className="font-semibold text-ink">Product / Requirement</span>
-                    <input type="text" placeholder="e.g. Carbide inserts for stainless turning, BT40 tool holders, coolant solution" className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+                    <input type="text" name="product" placeholder="e.g. Carbide inserts for stainless turning, BT40 tool holders, coolant solution" className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
                   </label>
                   <label className="text-sm sm:col-span-2">
                     <span className="font-semibold text-ink">Message</span>
-                    <textarea rows={4} className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+                    <textarea name="message" rows={4} className="mt-1.5 w-full rounded-lg border border-border px-3.5 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
                   </label>
                   <button type="submit" className="sm:col-span-2 rounded-lg bg-brand px-6 py-3.5 font-semibold text-white hover:bg-navy transition">
                     Submit Enquiry
