@@ -123,34 +123,46 @@ const brandCards = [
 
 const productCategories = [
   {
-    title: "Cutting Tools",
-    description: "Carbide inserts, turning tools, milling cutters, end mills, grooving and threading solutions.",
+    title: "OSG",
+    slug: "osg",
+    description: "Taps, drills, end mills, thread mills, indexable tooling, gauges and tool reconditioning.",
     image: imgCarbideInserts,
-    features: ["Actual product images", "Associated brands: OSG · Boehlerit · Duracarb", "Product detail pages"],
+    features: ["Taps · Drills · End Mills", "Thread Mills · Indexable", "Tooling Systems · Reconditioning"],
   },
   {
-    title: "Drilling & Holemaking Solutions",
-    description: "Replaceable insert drills, solid carbide drills, deep hole drills, indexable drills and chamfer tools.",
-    image: imgReplaceableInsertDrills,
-    features: ["Different image per drill type", "Associated brands: Allied Machine · OSG", "Request quote CTAs"],
-  },
-  {
-    title: "Tool Holding Systems",
-    description: "BT holders, HSK holders, collets, hydraulic chucks, tapping chucks and shrink fit holders.",
-    image: imgToolholders,
-    features: ["Correct holder visuals", "Associated brand: KTA Spindle Toolings", "Premium category layout"],
-  },
-  {
-    title: "Metalworking Fluids & Coolants",
-    description: "Cutting fluids, grinding fluids, coolants, forming oils, rust preventives and coolant management solutions.",
+    title: "Master Fluid Solutions",
+    slug: "master-fluid-solutions",
+    description: "TRIM®, WEDOLiT®, Master STAGES® and XYBEX® metalworking fluids and coolants.",
     image: imgCoolant,
-    features: ["Real container visuals", "Associated brand: Master Fluid Solutions", "Catalogue and sales CTAs"],
+    features: ["Cutting Fluids · Coolants", "Cleaners · Rust Preventives", "Coolant Management"],
   },
   {
-    title: "Wear Protection & Carbide Components",
-    description: "Carbide rods, blanks, wear parts, carbide dies and special carbide components.",
+    title: "Duracarb",
+    slug: "duracarb",
+    description: "Turning, milling, drilling and grooving carbide tooling built for precision.",
     image: imgCarbideRods,
-    features: ["Correct carbide component visuals", "Associated brand: Boehlerit", "Dedicated detail pages"],
+    features: ["Turning · Milling", "Drilling · Grooving", "Precision Carbide"],
+  },
+  {
+    title: "Boehlerit",
+    slug: "boehlerit",
+    description: "Carbide inserts, milling, turning, drilling, threading and wear protection solutions.",
+    image: imgReplaceableInsertDrills,
+    features: ["Turning · Milling", "Drilling · Threading", "Wear Protection · Forming"],
+  },
+  {
+    title: "KTA Spindle Toolings",
+    slug: "kta-spindle-toolings",
+    description: "BT holders, HSK holders, hydraulic chucks, collets and shrink fit systems.",
+    image: imgToolholders,
+    features: ["BT · HSK Holders", "Hydraulic · Shrink Fit", "Collets · Chucks"],
+  },
+  {
+    title: "Allied Machine",
+    slug: "allied-machine",
+    description: "AMEC, Wohlhaupter and T-A Pro — the holemaking specialists for drilling, boring, reaming and threading.",
+    image: imgReplaceableInsertDrills,
+    features: ["Drilling · Boring", "Reaming · Threading", "Structural · BT-A"],
   },
 ];
 
