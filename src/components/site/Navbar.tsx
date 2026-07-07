@@ -53,7 +53,7 @@ export function Navbar() {
           <div className="group relative">
             <Link
               to="/products"
-              className="px-4 py-2 text-sm font-medium text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -74,22 +74,23 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">Manufacturers</Link>
-          <Link to="/about" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-4 py-2 text-sm font-medium text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">Manufacturers</Link>
+          <Link to="/about" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-3 py-2 text-[13px] font-medium text-ink hover:text-brand">Contact</Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4 shrink-0">
-          <a href="tel:+919787118179" className="text-sm font-semibold text-ink inline-flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-3 shrink-0">
+          <a href="tel:+919787118179" className="text-[13px] font-semibold text-ink inline-flex items-center gap-1.5">
             <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
           </a>
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-navy transition"
+            className="inline-flex items-center rounded-md bg-brand px-3.5 py-2 text-[13px] font-semibold text-white shadow-md hover:bg-navy transition"
           >
             Request Quote
           </Link>
         </div>
+
 
         <button className="justify-self-end p-2 lg:hidden" onClick={() => setOpen(true)} aria-label="Menu">
           <Menu className="h-7 w-7 text-ink" />
