@@ -1,7 +1,7 @@
 import { Phone, Mail } from "lucide-react";
 
 export function PreHeader() {
-  const marquee = "AUTHORIZED DISTRIBUTOR BRANDS · OSG · Allied Machine · Master Fluid Solutions · Boehlerit · KTA Spindle Toolings · ANEC · Duracarb · Industrial Tooling Supplier · CNC Cutting Tools · Tool Holding Systems · Metalworking Fluids Supplier";
+  const marquee = "AUTHORIZED DISTRIBUTOR BRANDS · OSG · Allied Machine · Master Fluid Solutions · Boehlerit · KTA Spindle Toolings · AMEC · Duracarb · Industrial Tooling Supplier · CNC Cutting Tools · Tool Holding Systems · Metalworking Fluids Supplier";
   return (
     <div className="bg-navy text-white/80 text-[11px]">
       <div className="container-x h-9 flex items-center justify-between gap-6 overflow-hidden">
