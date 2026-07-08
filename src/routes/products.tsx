@@ -171,7 +171,7 @@ const brandLinks = [
   { label: "Master Fluid Solutions", url: "https://www.masterfluids.com/" },
   { label: "Boehlerit", url: "https://www.boehlerit.com/" },
   { label: "KTA Spindle Toolings", url: "https://www.ktaspindletoolings.com/" },
-  { label: "ANEC", url: "https://www.anectools.de/" },
+  { label: "AMEC", url: "https://alliedmachine.cld.bz/All-Literature/B10-K-Special-Boring-Solutions/4/", catalogue: true },
   { label: "Duracarb", url: "https://www.duracarb.com/" },
 ];
 
@@ -296,8 +296,11 @@ function Products() {
           <Reveal delay={0.08}>
             <div className="grid sm:grid-cols-2 gap-3">
               {brandLinks.map((brand) => (
-                <a key={brand.label} href={brand.url} target="_blank" rel="noreferrer" className="rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
-                  {brand.label}
+                <a key={brand.label} href={brand.url} target="_blank" rel="noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
+                  <span>{brand.label}</span>
+                  {"catalogue" in brand && brand.catalogue ? (
+                    <span className="text-xs font-semibold text-brand">Download Catalogue ↗</span>
+                  ) : null}
                 </a>
               ))}
             </div>

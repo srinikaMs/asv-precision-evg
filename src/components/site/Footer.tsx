@@ -39,7 +39,7 @@ export function Footer() {
             <li>Master Fluid Solutions</li>
             <li>Boehlerit</li>
             <li>KTA Spindle Toolings</li>
-            <li>ANEC</li>
+            <li>AMEC</li>
             <li>Duracarb</li>
           </ul>
         </div>

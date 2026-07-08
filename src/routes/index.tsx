@@ -113,11 +113,11 @@ const brandCards = [
     website: "https://www.masterfluids.com/",
   },
   {
-    name: "ANEC",
-    country: "Germany",
-    description: "Industrial cutting and machining solutions with a strong technical production focus.",
-    expertise: "Drilling, milling, turning and tooling systems",
-    website: "https://www.anectools.de/",
+    name: "AMEC",
+    country: "USA",
+    description: "Allied Machine's AMEC — indexable insert holemaking solutions for drilling and boring.",
+    expertise: "Indexable drilling, boring and holemaking",
+    website: "https://alliedmachine.cld.bz/All-Literature/B10-K-Special-Boring-Solutions/4/",
   },
 ];
 
