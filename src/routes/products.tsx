@@ -171,7 +171,7 @@ const brandLinks = [
   { label: "Master Fluid Solutions", url: "https://www.masterfluids.com/" },
   { label: "Boehlerit", url: "https://www.boehlerit.com/" },
   { label: "KTA Spindle Toolings", url: "https://www.ktaspindletoolings.com/" },
-  { label: "ANEC", url: "https://www.anectools.de/" },
+  { label: "AMEC", url: "https://alliedmachine.cld.bz/All-Literature/B10-K-Special-Boring-Solutions/4/", catalogue: true },
   { label: "Duracarb", url: "https://www.duracarb.com/" },
 ];
 
