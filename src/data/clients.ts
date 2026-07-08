@@ -1,11 +1,11 @@
-import brakesIndia from "@/assets/client-brakes-india-v2.png.asset.json";
+import brakesIndia from "@/assets/client-sundaram-clayton-v2.jpg.asset.json";
 import turboEnergy from "@/assets/client-turbo-energy.jpg.asset.json";
 import abiShowatech from "@/assets/client-abi-showatech.png.asset.json";
 import wheelsIndia from "@/assets/client-wheels-india-new.png.asset.json";
 import sundramFasteners from "@/assets/client-tvs.jpg.asset.json";
 import axlesIndia from "@/assets/client-axles-india-new.jpg.asset.json";
 import rte from "@/assets/client-rte.webp.asset.json";
-import sundaramClayton from "@/assets/client-sundaram-clayton-v2.jpg.asset.json";
+import sundaramClayton from "@/assets/client-brakes-india-v2.png.asset.json";
 import hyundaiWia from "@/assets/client-hyundai-wia.png.asset.json";
 import somicZf from "@/assets/client-somic-zf.png.asset.json";
 
