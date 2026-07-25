@@ -329,9 +329,11 @@ function Products() {
           <div className="container-x">
             <Reveal>
               <div className="text-center max-w-3xl mx-auto">
-                <div className={`inline-block eyebrow text-white px-4 py-1.5 rounded-full bg-gradient-to-r ${showcase.accent}`}>Authorized Distributor</div>
-                <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-navy tracking-tight">{showcase.brand}</h2>
-                <p className="mt-3 text-mute md:text-lg">{showcase.tagline}</p>
+                <div className="inline-flex items-center gap-2 rounded-full bg-navy px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold ring-1 ring-gold/30">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Authorized Distributor
+                </div>
+                <h2 className={`mt-5 text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r ${showcase.accent} bg-clip-text text-transparent`}>{showcase.brand}</h2>
+                <p className="mt-3 text-mute md:text-lg font-medium">{showcase.tagline}</p>
               </div>
             </Reveal>
 
