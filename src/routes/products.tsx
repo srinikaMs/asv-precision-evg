@@ -54,6 +54,14 @@ import osgGauges from "@/assets/osg-gauges.png.asset.json";
 import osgToolingSystems from "@/assets/osg-toolingsystems.jpg.asset.json";
 import osgOthers from "@/assets/osg-others.jpg.asset.json";
 import osgRegrind from "@/assets/osg-regrind.jpg.asset.json";
+import mfsTrim from "@/assets/mfs-trim.png.asset.json";
+import mfsStages from "@/assets/mfs-stages.png.asset.json";
+import mfsCoolantSystem from "@/assets/mfs-coolant-system.png.asset.json";
+import mfsFactory from "@/assets/mfs-factory.jpg.asset.json";
+import duracarbMilling from "@/assets/duracarb-milling.png.asset.json";
+import duracarbTurning from "@/assets/duracarb-turning.png.asset.json";
+import duracarbGrooving from "@/assets/duracarb-grooving.png.asset.json";
+import duracarbDrilling from "@/assets/duracarb-drilling.png.asset.json";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
