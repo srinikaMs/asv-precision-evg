@@ -6,9 +6,9 @@ import { clients } from "@/data/clients";
 export const Route = createFileRoute("/customers")({
   head: () => ({
     meta: [
-      { title: "Manufacturers We Serve | ASV Engineering Solutions" },
+      { title: "Clients We Serve | ASV Engineering Solutions" },
       { name: "description", content: "Trusted industrial tooling supplier for Brakes India, Turbo Energy, ABI-Showatech, Wheels India, Sundram Fasteners, Hyundai WIA and other manufacturers." },
-      { property: "og:title", content: "Manufacturers We Serve | ASV Engineering Solutions" },
+      { property: "og:title", content: "Clients We Serve | ASV Engineering Solutions" },
       { property: "og:description", content: "Premium industrial tooling support for leading manufacturers across Tamil Nadu." },
       { property: "og:url", content: "https://asv-precision-evg.lovable.app/customers" },
     ],
@@ -29,8 +29,8 @@ function Customers() {
     <>
       <section className="hero-grad text-white py-24">
         <div className="container-x">
-          <div className="text-xs text-white/60"><Link to="/" className="hover:text-white">Home</Link> / Manufacturers We Serve</div>
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold max-w-3xl">Manufacturers We Serve</h1>
+          <div className="text-xs text-white/60"><Link to="/" className="hover:text-white">Home</Link> / Clients We Serve</div>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold max-w-3xl">Clients We Serve</h1>
           <p className="mt-5 max-w-2xl text-white/70">Trusted by leading manufacturers who need dependable industrial tooling, engineering support and genuine product supply.</p>
         </div>
       </section>

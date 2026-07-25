@@ -349,7 +349,7 @@ function Home() {
 
       <section className="bg-white py-24">
         <div className="container-x">
-          <Reveal><div className="eyebrow text-brand text-center">Manufacturers We Serve</div></Reveal>
+          <Reveal><div className="eyebrow text-brand text-center">Clients We Serve</div></Reveal>
           <Reveal delay={0.05}><h2 className="mt-3 text-center text-3xl md:text-4xl font-extrabold text-navy">Trusted by production-driven manufacturers</h2></Reveal>
           <div className="mt-12 space-y-4 overflow-hidden">
             {[
