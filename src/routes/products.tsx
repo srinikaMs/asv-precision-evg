@@ -44,6 +44,17 @@ import imgCarbideBlanks from "@/assets/prod-carbideblanks.jpg";
 import imgCarbideDies from "@/assets/prod-carbidedies.jpg";
 import imgSpecialCarbideComponents from "@/assets/prod-specialcarbidecomponents.jpg";
 
+import osgTaps from "@/assets/osg-taps.jpg.asset.json";
+import osgDrills from "@/assets/osg-drills.jpg.asset.json";
+import osgEndmills from "@/assets/osg-endmills.jpg.asset.json";
+import osgIndexable from "@/assets/osg-indexable.jpg.asset.json";
+import osgThreadmills from "@/assets/osg-threadmills.png.asset.json";
+import osgDies from "@/assets/osg-dies.webp.asset.json";
+import osgGauges from "@/assets/osg-gauges.png.asset.json";
+import osgToolingSystems from "@/assets/osg-toolingsystems.jpg.asset.json";
+import osgOthers from "@/assets/osg-others.jpg.asset.json";
+import osgRegrind from "@/assets/osg-regrind.jpg.asset.json";
+
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
