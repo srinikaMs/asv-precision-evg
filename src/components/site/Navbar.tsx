@@ -17,7 +17,7 @@ const productCategories = [
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
-  { to: "/customers", label: "Manufacturers" },
+  { to: "/customers", label: "Clients" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -74,7 +74,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">Manufacturers</Link>
+          <Link to="/customers" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">Clients</Link>
           <Link to="/about" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">About</Link>
           <Link to="/contact" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">Contact</Link>
         </nav>
