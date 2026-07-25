@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/asv-logo.png.asset.json";
 
@@ -17,7 +17,7 @@ const productCategories = [
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
-  { to: "/customers", label: "Manufacturers" },
+  { to: "/customers", label: "Clients" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -49,11 +49,11 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          <Link to="/" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">Home</Link>
+          <Link to="/" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">Home</Link>
           <div className="group relative">
             <Link
               to="/products"
-              className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -74,18 +74,21 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">Manufacturers</Link>
-          <Link to="/about" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-3 py-2 text-[15px] font-semibold text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">Clients</Link>
+          <Link to="/about" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">Contact</Link>
         </nav>
 
-        <div className="hidden xl:flex items-center gap-3 shrink-0">
+        <div className="hidden xl:flex flex-col items-end gap-1 shrink-0">
           <a href="tel:+919787118179" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5">
             <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
           </a>
+          <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
+            <Mail className="h-3.5 w-3.5 text-brand" /> sales.asvengg@gmail.com
+          </a>
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-md bg-brand px-4 py-2.5 text-[14px] font-semibold text-white shadow-md hover:bg-navy transition"
+            className="mt-1 inline-flex items-center rounded-md bg-brand px-4 py-2 text-[13px] font-semibold text-white shadow-md hover:bg-navy transition"
           >
             Request Quote
           </Link>
