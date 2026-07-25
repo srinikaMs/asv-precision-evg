@@ -1,6 +1,9 @@
 import { Phone, Mail } from "lucide-react";
+import { useRouterState } from "@tanstack/react-router";
 
 export function PreHeader() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  if (pathname === "/") return null;
   const marquee = "AUTHORIZED DISTRIBUTOR BRANDS · OSG · Allied Machine · Master Fluid Solutions · Boehlerit · KTA Spindle Toolings · AMEC · Duracarb · Industrial Tooling Supplier · CNC Cutting Tools · Tool Holding Systems · Metalworking Fluids Supplier";
   return (
     <div className="bg-navy text-white/80 text-[11px]">
@@ -19,3 +22,4 @@ export function PreHeader() {
     </div>
   );
 }
+
