@@ -222,10 +222,10 @@ const brandShowcases: BrandShowcase[] = [
     tagline: "Complete Solutions for Metalworking Fluids",
     accent: "from-teal-600 to-navy",
     products: [
-      { name: "TRIM®", url: "https://www.masterfluids.com/in/en-in/products/brand-and-application.php?brand_cat=C29C", image: imgCoolant },
-      { name: "WEDOLiT®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=B10B&limit=brand", image: imgCuttingoil },
-      { name: "Master STAGES®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=B2B&limit=brand", image: imgSynthetic },
-      { name: "XYBEX®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=A2A&limit=brand", image: imgRustprev },
+      { name: "TRIM®", url: "https://www.masterfluids.com/in/en-in/products/brand-and-application.php?brand_cat=C29C", image: mfsTrim.url },
+      { name: "WEDOLiT®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=B10B&limit=brand", image: mfsFactory.url },
+      { name: "Master STAGES®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=B2B&limit=brand", image: mfsStages.url },
+      { name: "XYBEX®", url: "https://www.masterfluids.com/in/en-in/products/show-all-products.php?brand_cat=A2A&limit=brand", image: mfsCoolantSystem.url },
     ],
   },
   {
@@ -234,10 +234,10 @@ const brandShowcases: BrandShowcase[] = [
     tagline: "Built for Precision. Made to Last.",
     accent: "from-red-600 to-navy",
     products: [
-      { name: "Grooving", url: "https://www.duracarb-india.com/home-page/dcut/", image: imgGroovingParting },
-      { name: "Drilling", url: "https://www.duracarb-india.com/ddrill/", image: imgDrills },
-      { name: "Turning", url: "https://www.duracarb-india.com/dturn/", image: imgTurningTools },
-      { name: "Milling", url: "https://www.duracarb-india.com/dmill/", image: imgMillingCutters },
+      { name: "Milling", url: "https://www.duracarb-india.com/dmill/", image: duracarbMilling.url },
+      { name: "Turning", url: "https://www.duracarb-india.com/dturn/", image: duracarbTurning.url },
+      { name: "Grooving", url: "https://www.duracarb-india.com/home-page/dcut/", image: duracarbGrooving.url },
+      { name: "Drilling", url: "https://www.duracarb-india.com/ddrill/", image: duracarbDrilling.url },
     ],
   },
   {
