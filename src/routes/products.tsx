@@ -44,6 +44,17 @@ import imgCarbideBlanks from "@/assets/prod-carbideblanks.jpg";
 import imgCarbideDies from "@/assets/prod-carbidedies.jpg";
 import imgSpecialCarbideComponents from "@/assets/prod-specialcarbidecomponents.jpg";
 
+import osgTaps from "@/assets/osg-taps.jpg.asset.json";
+import osgDrills from "@/assets/osg-drills.jpg.asset.json";
+import osgEndmills from "@/assets/osg-endmills.jpg.asset.json";
+import osgIndexable from "@/assets/osg-indexable.jpg.asset.json";
+import osgThreadmills from "@/assets/osg-threadmills.png.asset.json";
+import osgDies from "@/assets/osg-dies.webp.asset.json";
+import osgGauges from "@/assets/osg-gauges.png.asset.json";
+import osgToolingSystems from "@/assets/osg-toolingsystems.jpg.asset.json";
+import osgOthers from "@/assets/osg-others.jpg.asset.json";
+import osgRegrind from "@/assets/osg-regrind.jpg.asset.json";
+
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
@@ -185,16 +196,16 @@ const brandShowcases: BrandShowcase[] = [
     tagline: "Shaping Tomorrow Through Innovation",
     accent: "from-blue-600 to-navy",
     products: [
-      { name: "Taps", url: "https://www.osg.co.jp/en/products/tap/", image: imgTaps },
-      { name: "Drills", url: "https://www.osg.co.jp/en/products/drill/", image: imgDrills },
-      { name: "End Mills", url: "https://www.osg.co.jp/en/products/endmill/", image: imgEndmills },
-      { name: "Indexable", url: "https://www.osg.co.jp/en/products/indexable/index.html", image: imgIndexable },
-      { name: "Thread Mills", url: "https://www.osg.co.jp/en/products/threadmill/index.html", image: imgThreading },
-      { name: "Dies", url: "https://www.osg.co.jp/en/products/dies/index.html", image: imgCarbideDies },
-      { name: "Gauges", url: "https://www.osg.co.jp/en/products/gauge/index.html", image: imgBoreGauge },
-      { name: "Tooling Systems", url: "https://www.osg.co.jp/en/products/tooling/index.html", image: imgToolholders },
-      { name: "Others", url: "https://www.osg.co.jp/en/products/others/index.html", image: imgCustom },
-      { name: "Tool Reconditioning", url: "https://www.osg.co.jp/en/products/re_grind/index.html", image: imgRegrinding },
+      { name: "Taps", url: "https://www.osg.co.jp/en/products/tap/", image: osgTaps.url },
+      { name: "Drills", url: "https://www.osg.co.jp/en/products/drill/", image: osgDrills.url },
+      { name: "End Mills", url: "https://www.osg.co.jp/en/products/endmill/", image: osgEndmills.url },
+      { name: "Indexable", url: "https://www.osg.co.jp/en/products/indexable/index.html", image: osgIndexable.url },
+      { name: "Thread Mills", url: "https://www.osg.co.jp/en/products/threadmill/index.html", image: osgThreadmills.url },
+      { name: "Dies", url: "https://www.osg.co.jp/en/products/dies/index.html", image: osgDies.url },
+      { name: "Gauges", url: "https://www.osg.co.jp/en/products/gauge/index.html", image: osgGauges.url },
+      { name: "Tooling Systems", url: "https://www.osg.co.jp/en/products/tooling/index.html", image: osgToolingSystems.url },
+      { name: "Others", url: "https://www.osg.co.jp/en/products/others/index.html", image: osgOthers.url },
+      { name: "Tool Reconditioning", url: "https://www.osg.co.jp/en/products/re_grind/index.html", image: osgRegrind.url },
     ],
   },
   {
@@ -318,9 +329,11 @@ function Products() {
           <div className="container-x">
             <Reveal>
               <div className="text-center max-w-3xl mx-auto">
-                <div className={`inline-block eyebrow text-white px-4 py-1.5 rounded-full bg-gradient-to-r ${showcase.accent}`}>Authorized Distributor</div>
-                <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-navy tracking-tight">{showcase.brand}</h2>
-                <p className="mt-3 text-mute md:text-lg">{showcase.tagline}</p>
+                <div className="inline-flex items-center gap-2 rounded-full bg-navy px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold ring-1 ring-gold/30">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Authorized Distributor
+                </div>
+                <h2 className={`mt-5 text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r ${showcase.accent} bg-clip-text text-transparent`}>{showcase.brand}</h2>
+                <p className="mt-3 text-mute md:text-lg font-medium">{showcase.tagline}</p>
               </div>
             </Reveal>
 
