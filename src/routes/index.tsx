@@ -62,9 +62,9 @@ const heroSlides = [
 ];
 
 const stats = [
-  { label: "Authorized Brands", to: 7, suffix: "" },
+  { label: "Authorized Brands", to: 6, suffix: "" },
   { label: "Industrial Product Categories", to: 5, suffix: "" },
-  { label: "Manufacturers We Serve", to: 11, suffix: "+" },
+  { label: "Clients We Serve", to: 11, suffix: "+" },
   { label: "Lead Response Focus", to: 24, suffix: "h" },
 ];
 
