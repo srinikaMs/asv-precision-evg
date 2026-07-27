@@ -43,6 +43,10 @@ import imgWearParts from "@/assets/prod-wearparts.jpg";
 import imgCarbideBlanks from "@/assets/prod-carbideblanks.jpg";
 import imgCarbideDies from "@/assets/prod-carbidedies.jpg";
 import imgSpecialCarbideComponents from "@/assets/prod-specialcarbidecomponents.jpg";
+import boehleritMilling from "@/assets/boehlerit-milling.png.asset.json";
+import boehleritTurning from "@/assets/boehlerit-turning.png.asset.json";
+import boehleritThreading from "@/assets/boehlerit-threading.png.asset.json";
+import boehleritDrilling from "@/assets/boehlerit-drilling.png.asset.json";
 
 import osgTaps from "@/assets/osg-taps.jpg.asset.json";
 import osgDrills from "@/assets/osg-drills.jpg.asset.json";
