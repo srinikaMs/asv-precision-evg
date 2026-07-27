@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
 import { FloatingActions } from "../components/site/FloatingActions";
-import { PreHeader } from "../components/site/PreHeader";
+
 
 function NotFoundComponent() {
   return (
@@ -111,7 +111,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <PreHeader />
+      
       <Navbar />
       <main><Outlet /></main>
       <Footer />

@@ -246,11 +246,10 @@ const brandShowcases: BrandShowcase[] = [
     tagline: "Precision · Performance · Productivity",
     accent: "from-blue-700 to-navy",
     products: [
-      { name: "Turning", url: "https://www.boehlerit.com/en/cutting-turning/", image: imgTurningTools },
-      { name: "Milling", url: "https://www.boehlerit.com/en/cutting-milling-english/", image: imgMillingCutters },
-      { name: "Drilling", url: "https://www.boehlerit.com/en/cutting-drilling-threading/", image: imgDrills },
-      { name: "Threading", url: "https://www.boehlerit.com/en/cutting-drilling-threading/#threading", image: imgThreading },
-      { name: "Forming Technology", url: "https://www.boehlerit.com/en/cutting-forming-technology/", image: imgWearParts },
+      { name: "Milling", url: "https://www.boehlerit.com/en/cutting-milling-english/", image: boehleritMilling.url },
+      { name: "Turning", url: "https://www.boehlerit.com/en/cutting-turning/", image: boehleritTurning.url },
+      { name: "Threading", url: "https://www.boehlerit.com/en/cutting-drilling-threading/#threading", image: boehleritThreading.url },
+      { name: "Drilling", url: "https://www.boehlerit.com/en/cutting-drilling-threading/", image: boehleritDrilling.url },
     ],
   },
   {
