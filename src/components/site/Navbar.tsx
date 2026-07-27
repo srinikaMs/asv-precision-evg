@@ -49,11 +49,11 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          <Link to="/" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">Home</Link>
+          <Link to="/" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">Home</Link>
           <div className="group relative">
             <Link
               to="/products"
-              className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -74,12 +74,12 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">Clients</Link>
-          <Link to="/about" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-3 py-2 text-[17px] font-semibold text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">Clients</Link>
+          <Link to="/about" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">Contact</Link>
         </nav>
 
-        <div className="hidden xl:flex flex-col items-end gap-1 shrink-0">
+        <div className="hidden lg:flex flex-col items-end gap-1 shrink-0">
           <a href="tel:+919787118179" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5">
             <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
           </a>
@@ -93,6 +93,7 @@ export function Navbar() {
             Request Quote
           </Link>
         </div>
+
 
 
         <button className="justify-self-end p-2 lg:hidden" onClick={() => setOpen(true)} aria-label="Menu">
