@@ -43,6 +43,10 @@ import imgWearParts from "@/assets/prod-wearparts.jpg";
 import imgCarbideBlanks from "@/assets/prod-carbideblanks.jpg";
 import imgCarbideDies from "@/assets/prod-carbidedies.jpg";
 import imgSpecialCarbideComponents from "@/assets/prod-specialcarbidecomponents.jpg";
+import boehleritMilling from "@/assets/boehlerit-milling.png.asset.json";
+import boehleritTurning from "@/assets/boehlerit-turning.png.asset.json";
+import boehleritThreading from "@/assets/boehlerit-threading.png.asset.json";
+import boehleritDrilling from "@/assets/boehlerit-drilling.png.asset.json";
 
 import osgTaps from "@/assets/osg-taps.jpg.asset.json";
 import osgDrills from "@/assets/osg-drills.jpg.asset.json";
@@ -246,11 +250,10 @@ const brandShowcases: BrandShowcase[] = [
     tagline: "Precision · Performance · Productivity",
     accent: "from-blue-700 to-navy",
     products: [
-      { name: "Turning", url: "https://www.boehlerit.com/en/cutting-turning/", image: imgTurningTools },
-      { name: "Milling", url: "https://www.boehlerit.com/en/cutting-milling-english/", image: imgMillingCutters },
-      { name: "Drilling", url: "https://www.boehlerit.com/en/cutting-drilling-threading/", image: imgDrills },
-      { name: "Threading", url: "https://www.boehlerit.com/en/cutting-drilling-threading/#threading", image: imgThreading },
-      { name: "Forming Technology", url: "https://www.boehlerit.com/en/cutting-forming-technology/", image: imgWearParts },
+      { name: "Milling", url: "https://www.boehlerit.com/en/cutting-milling-english/", image: boehleritMilling.url },
+      { name: "Turning", url: "https://www.boehlerit.com/en/cutting-turning/", image: boehleritTurning.url },
+      { name: "Threading", url: "https://www.boehlerit.com/en/cutting-drilling-threading/#threading", image: boehleritThreading.url },
+      { name: "Drilling", url: "https://www.boehlerit.com/en/cutting-drilling-threading/", image: boehleritDrilling.url },
     ],
   },
   {
