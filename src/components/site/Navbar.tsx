@@ -39,21 +39,29 @@ export function Navbar() {
         scrolled ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]" : "bg-white/95 backdrop-blur"
       }`}
     >
-      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-1 lg:flex lg:justify-between lg:gap-4">
-        <Link to="/" className="flex min-w-0 items-center gap-3">
-          <img src={logo.url} alt="ASV Engineering Solutions" className="h-12 w-auto shrink-0 md:h-14 lg:h-16" />
+      <div className="container-x flex items-center justify-between gap-3 py-2 md:py-3">
+        <Link to="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+          <img
+            src={logo.url}
+            alt="ASV Engineering Solutions"
+            className="h-14 w-auto shrink-0 sm:h-16 md:h-[72px] lg:h-[80px] xl:h-[88px]"
+          />
           <div className="min-w-0 leading-tight">
-            <div className="whitespace-nowrap font-extrabold text-ink text-[13px] sm:text-[15px] md:text-[17px] lg:text-[19px] tracking-tight">ASV Engineering Solutions</div>
-            <div className="hidden whitespace-nowrap text-[10px] md:text-[11px] text-mute sm:block">Industrial Tooling & Engineering Solutions</div>
+            <div className="truncate font-extrabold text-ink text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] tracking-tight">
+              ASV Engineering Solutions
+            </div>
+            <div className="hidden truncate text-[11px] md:text-[12px] lg:text-[13px] text-mute sm:block">
+              Industrial Tooling & Engineering Solutions
+            </div>
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
-          <Link to="/" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">Home</Link>
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
+          <Link to="/" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Home</Link>
           <div className="group relative">
             <Link
               to="/products"
-              className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -70,36 +78,36 @@ export function Navbar() {
                     <span className="text-xs text-mute text-right">{b.desc}</span>
                   </Link>
                 ))}
-
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">Clients</Link>
-          <Link to="/about" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-3 py-2 text-[18px] font-semibold text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Clients</Link>
+          <Link to="/about" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Contact</Link>
         </nav>
 
-        <div className="hidden lg:flex flex-col items-end gap-1 shrink-0">
-          <a href="tel:+919787118179" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5">
-            <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
-          </a>
-          <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
-            <Mail className="h-3.5 w-3.5 text-brand" /> sales.asvengg@gmail.com
-          </a>
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
+          <div className="hidden xl:flex flex-col items-end gap-0.5">
+            <a href="tel:+919787118179" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
+              <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
+            </a>
+            <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
+              <Mail className="h-3.5 w-3.5 text-brand" /> sales.asvengg@gmail.com
+            </a>
+          </div>
           <Link
             to="/contact"
-            className="mt-1 inline-flex items-center rounded-md bg-brand px-4 py-2 text-[13px] font-semibold text-white shadow-md hover:bg-navy transition"
+            className="inline-flex items-center rounded-md bg-brand px-4 py-2.5 text-[14px] font-semibold text-white shadow-md hover:bg-navy transition whitespace-nowrap"
           >
             Request Quote
           </Link>
         </div>
 
-
-
-        <button className="justify-self-end p-2 lg:hidden" onClick={() => setOpen(true)} aria-label="Menu">
+        <button className="p-2 lg:hidden shrink-0" onClick={() => setOpen(true)} aria-label="Menu">
           <Menu className="h-7 w-7 text-ink" />
         </button>
       </div>
+
 
       <AnimatePresence>
         {open && (
