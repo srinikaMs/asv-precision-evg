@@ -41,7 +41,7 @@ export function Navbar() {
     >
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-1 lg:flex lg:justify-between lg:gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <img src={logo.url} alt="ASV Engineering Solutions" className="h-[72px] w-auto shrink-0 md:h-[88px] lg:h-[100px]" />
+          <img src={logo.url} alt="ASV Engineering Solutions" className="h-12 w-auto shrink-0 md:h-14 lg:h-16" />
           <div className="min-w-0 leading-tight">
             <div className="whitespace-nowrap font-extrabold text-ink text-[13px] sm:text-[15px] md:text-[17px] lg:text-[19px] tracking-tight">ASV Engineering Solutions</div>
             <div className="hidden whitespace-nowrap text-[10px] md:text-[11px] text-mute sm:block">Industrial Tooling & Engineering Solutions</div>
