@@ -50,6 +50,8 @@ import boehleritDrilling from "@/assets/boehlerit-drilling.png.asset.json";
 import ktaHskV2 from "@/assets/kta-hsk-v2.png.asset.json";
 import ktaHydraulicV2 from "@/assets/kta-hydraulic-v2.jpg.asset.json";
 import ktaColletsV2 from "@/assets/kta-collets-v2.jpg.asset.json";
+import ktaShrinkfitV2 from "@/assets/kta-shrinkfit-v2.png.asset.json";
+import ktaTappingChuck from "@/assets/kta-tapping-chuck.jpg.asset.json";
 
 import osgTaps from "@/assets/osg-taps.jpg.asset.json";
 import osgDrills from "@/assets/osg-drills.jpg.asset.json";
@@ -269,7 +271,8 @@ const brandShowcases: BrandShowcase[] = [
       { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: ktaHskV2.url },
       { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: ktaHydraulicV2.url },
       { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: ktaColletsV2.url },
-      { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: imgShrinkfit },
+      { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: ktaShrinkfitV2.url },
+      { name: "Tapping Chuck", url: "https://www.ktaspindletoolings.com/", image: ktaTappingChuck.url },
     ],
   },
   {
