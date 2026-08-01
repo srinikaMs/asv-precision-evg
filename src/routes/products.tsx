@@ -271,7 +271,8 @@ const brandShowcases: BrandShowcase[] = [
       { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: ktaHskV2.url },
       { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: ktaHydraulicV2.url },
       { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: ktaColletsV2.url },
-      { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: imgShrinkfit },
+      { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: ktaShrinkfitV2.url },
+      { name: "Tapping Chuck", url: "https://www.ktaspindletoolings.com/", image: ktaTappingChuck.url },
     ],
   },
   {
