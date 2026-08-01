@@ -177,7 +177,7 @@ function ProductDetail() {
                   >
                     WhatsApp Enquiry <MessageCircle className="h-4 w-4 text-brand" />
                   </a>
-                  <a href="tel:+919787118179" className="inline-flex items-center justify-between rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
+                  <a href="tel:+916380605550" className="inline-flex items-center justify-between rounded-xl border border-border p-4 font-semibold text-ink hover:bg-brand-soft transition">
                     Contact Sales <Phone className="h-4 w-4 text-brand" />
                   </a>
                 </div>

@@ -15,7 +15,7 @@ export function PreHeader() {
           </div>
         </div>
         <div className="hidden md:flex items-center gap-5 shrink-0">
-          <a href="tel:+919787118179" className="inline-flex items-center gap-1.5 hover:text-white"><Phone className="h-3 w-3" /> +91 97871 18179</a>
+          <a href="tel:+916380605550" className="inline-flex items-center gap-1.5 hover:text-white"><Phone className="h-3 w-3" /> +91 63806 05550</a>
           <a href="mailto:sales.asvengg@gmail.com" className="inline-flex items-center gap-1.5 hover:text-white"><Mail className="h-3 w-3" /> sales.asvengg@gmail.com</a>
         </div>
       </div>

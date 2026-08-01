@@ -20,7 +20,7 @@ export function FloatingActions() {
         </button>
       )}
       <a
-        href="tel:+919787118179"
+        href="tel:+916380605550"
         className="grid h-12 w-12 place-items-center rounded-full bg-brand text-white shadow-xl"
         aria-label="Call"
       >

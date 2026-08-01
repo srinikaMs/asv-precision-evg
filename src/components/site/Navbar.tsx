@@ -39,29 +39,30 @@ export function Navbar() {
         scrolled ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]" : "bg-white/95 backdrop-blur"
       }`}
     >
-      <div className="container-x flex items-center justify-between gap-3 py-2 md:py-3">
+      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-3 px-3 py-4 sm:px-4 md:py-5 lg:px-5 xl:px-6">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <img
             src={logo.url}
             alt="ASV Engineering Solutions"
-            className="h-14 w-auto shrink-0 sm:h-16 md:h-[72px] lg:h-[80px] xl:h-[88px]"
+            className="h-14 w-auto shrink-0 sm:h-16 md:h-[72px] lg:h-[76px] xl:h-[84px]"
           />
-          <div className="min-w-0 leading-tight">
-            <div className="truncate font-extrabold text-ink text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] tracking-tight">
+          <div className="min-w-0 leading-tight lg:hidden">
+            <div className="truncate font-extrabold text-ink text-[14px] sm:text-[16px] md:text-[18px] tracking-tight">
               ASV Engineering Solutions
             </div>
-            <div className="hidden truncate text-[11px] md:text-[12px] lg:text-[13px] text-mute sm:block">
+            <div className="hidden truncate text-[11px] md:text-[12px] text-mute sm:block">
               Industrial Tooling & Engineering Solutions
             </div>
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
-          <Link to="/" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Home</Link>
+
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
+          <Link to="/" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">Home</Link>
           <div className="group relative">
             <Link
               to="/products"
-              className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -81,15 +82,15 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Clients</Link>
-          <Link to="/about" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">Clients</Link>
+          <Link to="/about" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">Contact</Link>
         </nav>
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
           <div className="hidden xl:flex flex-col items-end gap-0.5">
-            <a href="tel:+919787118179" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
-              <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
+            <a href="tel:+916380605550" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
+              <Phone className="h-4 w-4 text-brand" /> +91 63806 05550
             </a>
             <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
               <Mail className="h-3.5 w-3.5 text-brand" /> sales.asvengg@gmail.com
@@ -136,8 +137,8 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <a href="tel:+919787118179" className="mt-8 inline-flex items-center gap-3 text-lg">
-                <Phone className="h-5 w-5 text-gold" /> +91 97871 18179
+              <a href="tel:+916380605550" className="mt-8 inline-flex items-center gap-3 text-lg">
+                <Phone className="h-5 w-5 text-gold" /> +91 63806 05550
               </a>
             </nav>
           </motion.div>

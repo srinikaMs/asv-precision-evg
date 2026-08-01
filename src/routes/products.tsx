@@ -47,6 +47,9 @@ import boehleritMilling from "@/assets/boehlerit-milling.png.asset.json";
 import boehleritTurning from "@/assets/boehlerit-turning.png.asset.json";
 import boehleritThreading from "@/assets/boehlerit-threading.png.asset.json";
 import boehleritDrilling from "@/assets/boehlerit-drilling.png.asset.json";
+import ktaHskV2 from "@/assets/kta-hsk-v2.png.asset.json";
+import ktaHydraulicV2 from "@/assets/kta-hydraulic-v2.jpg.asset.json";
+import ktaColletsV2 from "@/assets/kta-collets-v2.jpg.asset.json";
 
 import osgTaps from "@/assets/osg-taps.jpg.asset.json";
 import osgDrills from "@/assets/osg-drills.jpg.asset.json";
@@ -263,9 +266,9 @@ const brandShowcases: BrandShowcase[] = [
     accent: "from-yellow-500 to-navy",
     products: [
       { name: "BT Tool Holders", url: "https://www.ktaspindletoolings.com/", image: imgBtToolholders },
-      { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: imgHskHolders },
-      { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: imgHydraulicChucks },
-      { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: imgCollets },
+      { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: ktaHskV2.url },
+      { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: ktaHydraulicV2.url },
+      { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: ktaColletsV2.url },
       { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: imgShrinkfit },
     ],
   },

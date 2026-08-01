@@ -118,7 +118,7 @@ function Contact() {
             <div className="space-y-4">
               {[
                 [MapPin, "Address", "No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001"],
-                [Phone, "Phone", "+91 97871 18179"],
+                [Phone, "Phone", "+91 63806 05550"],
                 [Mail, "Email", "sales.asvengg@gmail.com"],
               ].map(([Icon, t, d]) => (
                 <div key={t as string} className="rounded-xl border border-border p-5 flex gap-4 items-start bg-white">
@@ -140,7 +140,7 @@ function Contact() {
               <a href="mailto:sales.asvengg@gmail.com?subject=Catalogue%20Request%20-%20ASV%20Precision" className="rounded-xl border border-border p-5 flex items-center gap-3 font-semibold text-ink hover:bg-brand-soft transition">
                 <Download className="h-5 w-5 text-brand" /> Email Enquiry / Download Catalogue
               </a>
-              <a href="tel:+919787118179" className="rounded-xl border border-border p-5 flex items-center gap-3 font-semibold text-ink hover:bg-brand-soft transition">
+              <a href="tel:+916380605550" className="rounded-xl border border-border p-5 flex items-center gap-3 font-semibold text-ink hover:bg-brand-soft transition">
                 <Headphones className="h-5 w-5 text-brand" /> Request Callback / Contact Sales
               </a>
             </div>

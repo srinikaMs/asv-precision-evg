@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         "@type": "Organization",
         name: "ASV Engineering Solutions",
         url: "https://asv-precision-evg.lovable.app",
-        telephone: "+91 97871 18179",
+        telephone: "+91 63806 05550",
         email: "sales.asvengg@gmail.com",
         address: {
           "@type": "PostalAddress",
