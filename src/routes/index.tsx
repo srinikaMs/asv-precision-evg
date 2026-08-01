@@ -418,7 +418,7 @@ function Home() {
         <div className="container-x grid md:grid-cols-3 gap-6">
           {[
             [MapPin, "Address", "No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001"],
-            [Phone, "Phone", "+91 97871 18179"],
+            [Phone, "Phone", "+91 63806 05550"],
             [Mail, "Email", "sales.asvengg@gmail.com"],
           ].map(([Icon, t, d], i) => (
             <Reveal key={t as string} delay={i * 0.08}>

@@ -47,7 +47,7 @@ export function Footer() {
           <h4 className="eyebrow text-gold">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> No. 3, 60 Feet Road, V.M Nagar Extn, JJ Salai, Tiruvallur, TN 602001</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> +91 97871 18179</li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> +91 63806 05550</li>
             <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> sales.asvengg@gmail.com</li>
           </ul>
         </div>

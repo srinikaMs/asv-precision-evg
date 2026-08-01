@@ -88,8 +88,8 @@ export function Navbar() {
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
           <div className="hidden xl:flex flex-col items-end gap-0.5">
-            <a href="tel:+919787118179" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
-              <Phone className="h-4 w-4 text-brand" /> +91 97871 18179
+            <a href="tel:+916380605550" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
+              <Phone className="h-4 w-4 text-brand" /> +91 63806 05550
             </a>
             <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
               <Mail className="h-3.5 w-3.5 text-brand" /> sales.asvengg@gmail.com
@@ -136,8 +136,8 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <a href="tel:+919787118179" className="mt-8 inline-flex items-center gap-3 text-lg">
-                <Phone className="h-5 w-5 text-gold" /> +91 97871 18179
+              <a href="tel:+916380605550" className="mt-8 inline-flex items-center gap-3 text-lg">
+                <Phone className="h-5 w-5 text-gold" /> +91 63806 05550
               </a>
             </nav>
           </motion.div>
