@@ -140,6 +140,9 @@ export function Navbar() {
               <a href="tel:+916380605550" className="mt-8 inline-flex items-center gap-3 text-lg">
                 <Phone className="h-5 w-5 text-gold" /> +91 63806 05550
               </a>
+              <a href="mailto:sales.asvengg@gmail.com" className="mt-3 inline-flex items-center gap-3 text-lg">
+                <Mail className="h-5 w-5 text-gold" /> sales.asvengg@gmail.com
+              </a>
             </nav>
           </motion.div>
         )}
