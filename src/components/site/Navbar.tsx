@@ -57,12 +57,12 @@ export function Navbar() {
         </Link>
 
 
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
-          <Link to="/" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Home</Link>
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
+          <Link to="/" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">Home</Link>
           <div className="group relative">
             <Link
               to="/products"
-              className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
+              className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand inline-flex items-center gap-1"
             >
               Products <ChevronDown className="h-4 w-4" />
             </Link>
@@ -82,9 +82,9 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <Link to="/customers" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Clients</Link>
-          <Link to="/about" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">About</Link>
-          <Link to="/contact" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Contact</Link>
+          <Link to="/customers" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">Clients</Link>
+          <Link to="/about" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">About</Link>
+          <Link to="/contact" className="px-2.5 py-2 text-[15px] xl:text-[17px] font-semibold text-ink hover:text-brand">Contact</Link>
         </nav>
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
