@@ -47,6 +47,9 @@ import boehleritMilling from "@/assets/boehlerit-milling.png.asset.json";
 import boehleritTurning from "@/assets/boehlerit-turning.png.asset.json";
 import boehleritThreading from "@/assets/boehlerit-threading.png.asset.json";
 import boehleritDrilling from "@/assets/boehlerit-drilling.png.asset.json";
+import ktaHskV2 from "@/assets/kta-hsk-v2.png.asset.json";
+import ktaHydraulicV2 from "@/assets/kta-hydraulic-v2.jpg.asset.json";
+import ktaColletsV2 from "@/assets/kta-collets-v2.jpg.asset.json";
 
 import osgTaps from "@/assets/osg-taps.jpg.asset.json";
 import osgDrills from "@/assets/osg-drills.jpg.asset.json";
