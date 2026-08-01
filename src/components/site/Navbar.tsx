@@ -88,11 +88,11 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          <div className="hidden xl:flex flex-col items-end gap-0.5">
-            <a href="tel:+916380605550" className="text-[14px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
+          <div className="flex flex-col items-end gap-0.5">
+            <a href="tel:+916380605550" className="text-[14px] xl:text-[15px] font-semibold text-ink inline-flex items-center gap-1.5 hover:text-brand">
               <Phone className="h-4 w-4 text-brand" /> +91 63806 05550
             </a>
-            <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
+            <a href="mailto:sales.asvengg@gmail.com" className="text-[12px] xl:text-[13px] font-medium text-mute inline-flex items-center gap-1.5 hover:text-brand">
               <Mail className="h-3.5 w-3.5 text-brand" /> sales.asvengg@gmail.com
             </a>
           </div>
@@ -139,6 +139,9 @@ export function Navbar() {
               ))}
               <a href="tel:+916380605550" className="mt-8 inline-flex items-center gap-3 text-lg">
                 <Phone className="h-5 w-5 text-gold" /> +91 63806 05550
+              </a>
+              <a href="mailto:sales.asvengg@gmail.com" className="mt-3 inline-flex items-center gap-3 text-lg">
+                <Mail className="h-5 w-5 text-gold" /> sales.asvengg@gmail.com
               </a>
             </nav>
           </motion.div>
