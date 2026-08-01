@@ -266,9 +266,9 @@ const brandShowcases: BrandShowcase[] = [
     accent: "from-yellow-500 to-navy",
     products: [
       { name: "BT Tool Holders", url: "https://www.ktaspindletoolings.com/", image: imgBtToolholders },
-      { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: imgHskHolders },
-      { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: imgHydraulicChucks },
-      { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: imgCollets },
+      { name: "HSK Holders", url: "https://www.ktaspindletoolings.com/", image: ktaHskV2.url },
+      { name: "Hydraulic Chucks", url: "https://www.ktaspindletoolings.com/", image: ktaHydraulicV2.url },
+      { name: "Collets", url: "https://www.ktaspindletoolings.com/", image: ktaColletsV2.url },
       { name: "Shrink Fit Holders", url: "https://www.ktaspindletoolings.com/", image: imgShrinkfit },
     ],
   },
