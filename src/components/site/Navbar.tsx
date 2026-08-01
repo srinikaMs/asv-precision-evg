@@ -39,22 +39,23 @@ export function Navbar() {
         scrolled ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]" : "bg-white/95 backdrop-blur"
       }`}
     >
-      <div className="container-x flex items-center justify-between gap-3 py-2 md:py-3">
+      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-3 px-3 py-4 sm:px-4 md:py-5 lg:px-5 xl:px-6">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <img
             src={logo.url}
             alt="ASV Engineering Solutions"
-            className="h-14 w-auto shrink-0 sm:h-16 md:h-[72px] lg:h-[80px] xl:h-[88px]"
+            className="h-14 w-auto shrink-0 sm:h-16 md:h-[72px] lg:h-[76px] xl:h-[84px]"
           />
-          <div className="min-w-0 leading-tight">
-            <div className="truncate font-extrabold text-ink text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] tracking-tight">
+          <div className="min-w-0 leading-tight lg:hidden">
+            <div className="truncate font-extrabold text-ink text-[14px] sm:text-[16px] md:text-[18px] tracking-tight">
               ASV Engineering Solutions
             </div>
-            <div className="hidden truncate text-[11px] md:text-[12px] lg:text-[13px] text-mute sm:block">
+            <div className="hidden truncate text-[11px] md:text-[12px] text-mute sm:block">
               Industrial Tooling & Engineering Solutions
             </div>
           </div>
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
           <Link to="/" className="px-2.5 py-2 text-[16px] xl:text-[18px] font-semibold text-ink hover:text-brand">Home</Link>
