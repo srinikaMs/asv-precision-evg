@@ -86,7 +86,7 @@ const brandCards = [
   },
   {
     name: "Duracarb",
-    country: "USA",
+    country: "India",
     description: "Specialist in carbide tooling and precision industrial carbide solutions.",
     expertise: "Carbide tools, wear components, custom carbide products",
     website: "https://www.duracarb.com/",
