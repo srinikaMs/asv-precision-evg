@@ -78,6 +78,12 @@ import duracarbMilling from "@/assets/duracarb-milling.png.asset.json";
 import duracarbTurning from "@/assets/duracarb-turning.png.asset.json";
 import duracarbGrooving from "@/assets/duracarb-grooving.png.asset.json";
 import duracarbDrilling from "@/assets/duracarb-drilling.png.asset.json";
+import logoOsg from "@/assets/brandlogo-osg.jpg.asset.json";
+import logoMfs from "@/assets/brandlogo-mfs.png.asset.json";
+import logoDuracarb from "@/assets/brandlogo-duracarb.png.asset.json";
+import logoBoehlerit from "@/assets/brandlogo-boehlerit.png.asset.json";
+import logoKta from "@/assets/brandlogo-kta.jpeg.asset.json";
+import logoAllied from "@/assets/brandlogo-allied.png.asset.json";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
