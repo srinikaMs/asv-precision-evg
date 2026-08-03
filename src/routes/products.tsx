@@ -217,12 +217,13 @@ const brandLinks = [
 ];
 
 type BrandProduct = { name: string; url: string; image: string };
-type BrandShowcase = { slug: string; brand: string; tagline: string; accent: string; products: BrandProduct[] };
+type BrandShowcase = { slug: string; brand: string; logo: string; tagline: string; accent: string; products: BrandProduct[] };
 
 const brandShowcases: BrandShowcase[] = [
   {
     slug: "osg",
     brand: "OSG",
+    logo: logoOsg.url,
     tagline: "Shaping Tomorrow Through Innovation",
     accent: "from-blue-600 to-navy",
     products: [
@@ -241,6 +242,7 @@ const brandShowcases: BrandShowcase[] = [
   {
     slug: "master-fluid-solutions",
     brand: "Master Fluid Solutions",
+    logo: logoMfs.url,
     tagline: "Complete Solutions for Metalworking Fluids",
     accent: "from-teal-600 to-navy",
     products: [
@@ -253,6 +255,7 @@ const brandShowcases: BrandShowcase[] = [
   {
     slug: "duracarb",
     brand: "Duracarb",
+    logo: logoDuracarb.url,
     tagline: "Built for Precision. Made to Last.",
     accent: "from-red-600 to-navy",
     products: [
@@ -265,6 +268,7 @@ const brandShowcases: BrandShowcase[] = [
   {
     slug: "boehlerit",
     brand: "Boehlerit",
+    logo: logoBoehlerit.url,
     tagline: "Precision · Performance · Productivity",
     accent: "from-blue-700 to-navy",
     products: [
@@ -277,6 +281,7 @@ const brandShowcases: BrandShowcase[] = [
   {
     slug: "kta-spindle-toolings",
     brand: "KTA Spindle Toolings",
+    logo: logoKta.url,
     tagline: "Precision Tools. Performance Assured.",
     accent: "from-yellow-500 to-navy",
     products: [
@@ -291,16 +296,17 @@ const brandShowcases: BrandShowcase[] = [
   {
     slug: "allied-machine",
     brand: "Allied Machine (AMEC · Wohlhaupter · T-A Pro)",
+    logo: logoAllied.url,
     tagline: "The Holemaking Specialists",
     accent: "from-red-700 to-navy",
     products: [
       { name: "Drilling", url: "https://www.alliedmachine.com/products/drilling/", image: amecDrilling.url },
-      { name: "Boring", url: "https://www.alliedmachine.com/products/boring/", image: amecBoring.url },
+      { name: "Boring", url: "https://www.alliedmachine.com/products/boring/", image: amecStructural.url },
       { name: "Specials", url: "https://www.alliedmachine.com/products/specials/", image: amecSpecials.url },
       { name: "Threading", url: "https://www.alliedmachine.com/products/threading/", image: amecThreading.url },
-      { name: "Reaming", url: "https://www.alliedmachine.com/products/reaming/", image: amecReaming.url },
-      { name: "Structural Steel", url: "https://www.alliedmachine.com/products/drilling/structural-steel-solutions/", image: amecStructural.url },
-      { name: "BT-A Drill", url: "https://www.alliedmachine.com/products/drilling/bta-deep-hole-drilling/bt-a-drill/", image: amecBta.url },
+      { name: "Reaming", url: "https://www.alliedmachine.com/products/reaming/", image: amecBoring.url },
+      { name: "Structural Steel", url: "https://www.alliedmachine.com/products/drilling/structural-steel-solutions/", image: amecBta.url },
+      { name: "BT-A Drill", url: "https://www.alliedmachine.com/products/drilling/bta-deep-hole-drilling/bt-a-drill/", image: amecReaming.url },
     ],
   },
 ];
@@ -358,17 +364,22 @@ function Products() {
           <div className="container-x">
             <Reveal>
               <div className="text-center max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-2 rounded-full bg-navy px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold ring-1 ring-gold/30">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Authorized Distributor
+                <div className="mx-auto mb-6 inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 shadow-[0_10px_30px_-15px_rgba(15,27,61,0.35)] ring-1 ring-border">
+                  <img src={showcase.logo} alt={`${showcase.brand} authorized distributor logo`} loading="lazy" className="h-12 md:h-16 w-auto object-contain" />
+                </div>
+                <div className="block">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-navy px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold ring-1 ring-gold/30">
+                    <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Authorized Distributor
+                  </span>
                 </div>
                 <h2 className={`mt-5 text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r ${showcase.accent} bg-clip-text text-transparent`}>{showcase.brand}</h2>
                 <p className="mt-3 text-mute md:text-lg font-medium">{showcase.tagline}</p>
               </div>
             </Reveal>
 
-            <Stagger className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6 snap-x snap-mandatory md:snap-none overflow-x-auto md:overflow-visible scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <Stagger className="mt-14 mx-auto flex flex-wrap justify-center gap-5 md:gap-6">
                 {showcase.products.map((p) => (
-                  <Item key={p.name} variants={itemVariants} className="snap-start">
+                  <Item key={p.name} variants={itemVariants} className="w-[calc(50%-0.625rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)]">
                     <a
                       href={p.url}
                       target="_blank"
