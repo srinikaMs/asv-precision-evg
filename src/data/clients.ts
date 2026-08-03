@@ -8,6 +8,8 @@ import rte from "@/assets/client-rte.webp.asset.json";
 import sundaramClayton from "@/assets/client-brakes-india-v2.png.asset.json";
 import hyundaiWia from "@/assets/client-hyundai-wia.png.asset.json";
 import somicZf from "@/assets/client-somic-zf.png.asset.json";
+import ltRubber from "@/assets/client-lt-rubber.png.asset.json";
+import gnutti from "@/assets/client-gnutti-carlo.jpg.asset.json";
 
 export type Client = { name: string; logo: string };
 
@@ -22,4 +24,6 @@ export const clients: Client[] = [
   { name: "Sundaram-Clayton Limited", logo: sundaramClayton.url },
   { name: "Hyundai WIA", logo: hyundaiWia.url },
   { name: "SOMIC ZF Components", logo: somicZf.url },
+  { name: "L&T Rubber Processing Machinery", logo: ltRubber.url },
+  { name: "Gnutti Carlo Group", logo: gnutti.url },
 ];

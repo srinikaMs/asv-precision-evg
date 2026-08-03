@@ -155,7 +155,7 @@ const productCategories = [
     title: "KTA Spindle Toolings",
     slug: "kta-spindle-toolings",
     description: "BT holders, HSK holders, hydraulic chucks, collets and shrink fit systems.",
-    image: imgToolholders,
+    image: catKta.url,
     features: ["BT · HSK Holders", "Hydraulic · Shrink Fit", "Collets · Chucks"],
   },
   {
