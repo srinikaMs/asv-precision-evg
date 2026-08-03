@@ -52,6 +52,13 @@ import ktaHydraulicV2 from "@/assets/kta-hydraulic-v2.jpg.asset.json";
 import ktaColletsV2 from "@/assets/kta-collets-v2.jpg.asset.json";
 import ktaShrinkfitV2 from "@/assets/kta-shrinkfit-v2.png.asset.json";
 import ktaTappingChuck from "@/assets/kta-tapping-chuck.jpg.asset.json";
+import amecDrilling from "@/assets/amec-drilling.png.asset.json";
+import amecBoring from "@/assets/amec-boring.png.asset.json";
+import amecSpecials from "@/assets/amec-specials.png.asset.json";
+import amecThreading from "@/assets/amec-threading.png.asset.json";
+import amecReaming from "@/assets/amec-reaming.png.asset.json";
+import amecStructural from "@/assets/amec-structural.png.asset.json";
+import amecBta from "@/assets/amec-bta.png.asset.json";
 
 import osgTaps from "@/assets/osg-taps.jpg.asset.json";
 import osgDrills from "@/assets/osg-drills.jpg.asset.json";
@@ -281,14 +288,13 @@ const brandShowcases: BrandShowcase[] = [
     tagline: "The Holemaking Specialists",
     accent: "from-red-700 to-navy",
     products: [
-      { name: "Drilling", url: "https://www.alliedmachine.com/products/drilling/", image: imgDrills },
-      { name: "Boring", url: "https://www.alliedmachine.com/products/boring/", image: imgBoringHead },
-      { name: "Specials", url: "https://www.alliedmachine.com/products/specials/", image: imgCustom },
-      { name: "Threading", url: "https://www.alliedmachine.com/products/threading/", image: imgThreading },
-      { name: "Reaming", url: "https://www.alliedmachine.com/products/reaming/", image: imgReamers },
-      { name: "Porting (AccuPort 432)", url: "https://www.alliedmachine.com/products/drilling/porting-tools/accuport-432/", image: imgChamferTools },
-      { name: "Structural Steel", url: "https://www.alliedmachine.com/products/drilling/structural-steel-solutions/", image: imgReplaceableInsertDrills },
-      { name: "BT-A Drill", url: "https://www.alliedmachine.com/products/drilling/bta-deep-hole-drilling/bt-a-drill/", image: imgDeepHoleDrills },
+      { name: "Drilling", url: "https://www.alliedmachine.com/products/drilling/", image: amecDrilling.url },
+      { name: "Boring", url: "https://www.alliedmachine.com/products/boring/", image: amecBoring.url },
+      { name: "Specials", url: "https://www.alliedmachine.com/products/specials/", image: amecSpecials.url },
+      { name: "Threading", url: "https://www.alliedmachine.com/products/threading/", image: amecThreading.url },
+      { name: "Reaming", url: "https://www.alliedmachine.com/products/reaming/", image: amecReaming.url },
+      { name: "Structural Steel", url: "https://www.alliedmachine.com/products/drilling/structural-steel-solutions/", image: amecStructural.url },
+      { name: "BT-A Drill", url: "https://www.alliedmachine.com/products/drilling/bta-deep-hole-drilling/bt-a-drill/", image: amecBta.url },
     ],
   },
 ];
