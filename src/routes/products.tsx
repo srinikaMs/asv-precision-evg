@@ -364,15 +364,10 @@ function Products() {
           <div className="container-x">
             <Reveal>
               <div className="text-center max-w-3xl mx-auto">
-                <div className="mx-auto mb-6 inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 shadow-[0_10px_30px_-15px_rgba(15,27,61,0.35)] ring-1 ring-border">
-                  <img src={showcase.logo} alt={`${showcase.brand} authorized distributor logo`} loading="lazy" className="h-12 md:h-16 w-auto object-contain" />
+                <div className="mx-auto mb-6 w-full max-w-3xl rounded-2xl bg-white px-8 py-8 shadow-[0_10px_30px_-15px_rgba(15,27,61,0.35)] ring-1 ring-border">
+                  <img src={showcase.logo} alt={`${showcase.brand} logo`} loading="lazy" className="mx-auto h-24 md:h-32 w-auto max-w-full object-contain" />
                 </div>
-                <div className="block">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-navy px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold ring-1 ring-gold/30">
-                    <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Authorized Distributor
-                  </span>
-                </div>
-                <h2 className={`mt-5 text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r ${showcase.accent} bg-clip-text text-transparent`}>{showcase.brand}</h2>
+                <h2 className={`mt-2 text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r ${showcase.accent} bg-clip-text text-transparent`}>{showcase.brand}</h2>
                 <p className="mt-3 text-mute md:text-lg font-medium">{showcase.tagline}</p>
               </div>
             </Reveal>

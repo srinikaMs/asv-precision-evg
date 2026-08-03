@@ -111,12 +111,14 @@ function About() {
                 initials: "AS",
                 name: "Mr. A. Suresh",
                 role: "Proprietor",
+                email: "suresh@asvengg.in",
                 bio: "Founder of ASV Engineering Solutions with deep roots in Tamil Nadu's manufacturing community.",
               },
               {
                 initials: "ND",
                 name: "Nandhan D",
                 role: "Sales & Application Manager",
+                email: "nandhan@asvengg.in",
                 bio: "Hands-on application engineer providing tool selection, parameter optimization and on-floor troubleshooting.",
               },
             ].map((person) => (
@@ -131,6 +133,7 @@ function About() {
                   </div>
                 </div>
                 <p className="mt-5 text-sm text-mute leading-relaxed">{person.bio}</p>
+                <a href={`mailto:${person.email}`} className="mt-4 inline-block text-sm font-semibold text-brand hover:underline">{person.email}</a>
               </Item>
             ))}
           </Stagger>
