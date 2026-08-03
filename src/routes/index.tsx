@@ -30,11 +30,12 @@ import heroBoehlerit from "@/assets/hero-boehlerit.png.asset.json";
 import heroKta from "@/assets/hero-kta.png.asset.json";
 import heroAmec from "@/assets/hero-amec.png.asset.json";
 import heroDuracarb from "@/assets/hero-duracarb.png.asset.json";
-import imgCarbideInserts from "@/assets/prod-carbideinserts.jpg";
-import imgReplaceableInsertDrills from "@/assets/prod-replaceableinsertdrills.jpg";
-import imgToolholders from "@/assets/prod-toolholders.jpg";
-import imgCoolant from "@/assets/prod-coolant.jpg";
-import imgCarbideRods from "@/assets/prod-carbiderods.jpg";
+import catOsg from "@/assets/osg-taps.jpg.asset.json";
+import catMfs from "@/assets/mfs-trim.png.asset.json";
+import catDuracarb from "@/assets/duracarb-milling.png.asset.json";
+import catBoehlerit from "@/assets/boehlerit-milling.png.asset.json";
+import catKta from "@/assets/kta-hsk-v2.png.asset.json";
+import catAllied from "@/assets/amec-drilling.png.asset.json";
 import imgAboutWorkshop from "@/assets/about-workshop.jpg";
 
 export const Route = createFileRoute("/")({
@@ -126,28 +127,28 @@ const productCategories = [
     title: "OSG",
     slug: "osg",
     description: "Taps, drills, end mills, thread mills, indexable tooling, gauges and tool reconditioning.",
-    image: imgCarbideInserts,
+    image: catOsg.url,
     features: ["Taps · Drills · End Mills", "Thread Mills · Indexable", "Tooling Systems · Reconditioning"],
   },
   {
     title: "Master Fluid Solutions",
     slug: "master-fluid-solutions",
     description: "TRIM®, WEDOLiT®, Master STAGES® and XYBEX® metalworking fluids and coolants.",
-    image: imgCoolant,
+    image: catMfs.url,
     features: ["Cutting Fluids · Coolants", "Cleaners · Rust Preventives", "Coolant Management"],
   },
   {
     title: "Duracarb",
     slug: "duracarb",
     description: "Turning, milling, drilling and grooving carbide tooling built for precision.",
-    image: imgCarbideRods,
+    image: catDuracarb.url,
     features: ["Turning · Milling", "Drilling · Grooving", "Precision Carbide"],
   },
   {
     title: "Boehlerit",
     slug: "boehlerit",
     description: "Carbide inserts, milling, turning, drilling, threading and wear protection solutions.",
-    image: imgReplaceableInsertDrills,
+    image: catBoehlerit.url,
     features: ["Turning · Milling", "Drilling · Threading", "Wear Protection · Forming"],
   },
   {
@@ -161,7 +162,7 @@ const productCategories = [
     title: "Allied Machine",
     slug: "allied-machine",
     description: "AMEC, Wohlhaupter and T-A Pro — the holemaking specialists for drilling, boring, reaming and threading.",
-    image: imgReplaceableInsertDrills,
+    image: catAllied.url,
     features: ["Drilling · Boring", "Reaming · Threading", "Structural · BT-A"],
   },
 ];
@@ -301,7 +302,7 @@ function Home() {
             {productCategories.map((category) => (
               <Item key={category.title} variants={itemVariants} className="rounded-xl overflow-hidden border border-border bg-white shadow-sm hover:-translate-y-1 hover:shadow-xl transition">
                 <Link to="/products" hash={category.slug} className="block">
-                  <img src={category.image} alt={category.title} className="h-52 w-full object-cover" loading="lazy" width={1024} height={1024} />
+                  <img src={category.image} alt={category.title} className="h-52 w-full object-contain bg-white p-4" loading="lazy" width={1024} height={1024} />
                   <div className="p-6">
                     <h3 className="font-bold text-ink text-xl">{category.title}</h3>
                     <p className="mt-2 text-sm text-mute leading-relaxed">{category.description}</p>
